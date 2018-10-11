@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>风尚购物</title>
+	<link rel="stylesheet" href="css/index.min.css">
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+	<script src = "js/require.js" async = "true" defer data-main = "js/main.min.js"></script>
+</head>
+<body>
+<!-- 整个外层大盒子 -->
+	<div class = "bigbox">
+		<!-- 右侧固定 -->
+		<div class="fixed">
+			<ul>
+				<li><span>购物车</span><p>0</p></li>
+				<li><span>我的消息</span><p>0</p></li>
+				<li id = "weChat"><span>微信公众号</span></li>
+			</ul>
+		</div>
+		<!-- 二维码 -->
+		<div id = "twoCode"></div>
+
+		<!-- 头部区域 -->
+		<div class="header">
+				<!-- 顶部 -->
+				<div class="top">
+					<div class="topin">
+						<ul>
+							<li>送至：</li>
+							<li id = "address">江西省 南昌市 东湖区</li>
+							<li>欢迎来到风尚购物</li>
+							<li><a href="">登录</a></li>
+							<li><a href="">注册</a></li>
+						</ul>
+						<ol>
+							<li id = "myf"><a href="" >我的风尚</a></li>
+							<li>4001-677-077</li>
+							<li id = "service"><a href="">客服中心</a></li>
+						</ol>
+					</div>
+				</div>
+
+				<!-- 经过出地址块元素  -->
+				<div id="throughAddress">
+					<div id="x">X</div>
+
+					<ol id = "olAdd">
+						<li class = "active" id = "province">江苏省</li>
+						<li id = "city">南昌市</li>
+						<li id = "area">东湖区</li>
+					</ol>
+					<div class="line"></div>
+
+					<ul  id = "ul1" style = "display:block">
+						<li><a href="#">江西省</a></li>
+						<li><a href="#">山东省</a></li>
+						<li><a href="#">广东省</a></li>
+						<li><a href="#">河南省</a></li>
+						<li><a href="#">河北省</a></li>
+						<li><a href="#">甘肃省</a></li>
+						<li><a href="#">江西省</a></li>
+						<li><a href="#">山东省</a></li>
+						<li><a href="#">广东省</a></li>
+						<li><a href="#">河南省</a></li>
+						<li><a href="#">河北省</a></li>
+						<li><a href="#">甘肃省</a></li>
+						<li><a href="#">江西省</a></li>
+						<li><a href="#">山东省</a></li>
+						<li><a href="#">广东省</a></li>
+						<li><a href="#">河南省</a></li>
+						<li><a href="#">河北省</a></li>
+					</ul>
+
+					<ul style = "display:none">
+						<li><a href="#">青岛市</a></li>
+						<li><a href="#">潍坊市</a></li>
+						<li><a href="#">淄博市</a></li>
+						<li><a href="#">潍坊市</a></li>
+						<li><a href="#">淄博市</a></li>
+						<li><a href="#">潍坊市</a></li>
+						<li><a href="#">枣庄市</a></li>
+						<li><a href="#">潍坊市</a></li>
+						<li><a href="#">枣庄市</a></li>
+						<li><a href="#">河南省</a></li>
+					</ul>
+
+					<ul style = "display:none">
+						<li><a href="#">青州市</a></li>
+						<li><a href="#">高密市</a></li>
+						<li><a href="#">诸城市</a></li>
+						<li><a href="#">坊子区</a></li>
+						<li><a href="#">寿光市</a></li>
+						<li><a href="#">昌乐县</a></li>
+						<li><a href="#">安丘县</a></li>
+					</ul>
+					
+				</div>
+
+				<!-- 我的风尚 -->
+				<ul id = "my">
+					<li><a href="#">我的订单</a></li>
+					<li><a href="#">我的收藏</a></li>
+				</ul>
+
+				<!--头部中间位置 -->
+				<div class="cent">
+					<div class="centin">
+						<img src="../images/46.png" alt="" class="logo">
+						<img src="../images/44.jpg" alt="" class = "car">
+						<form action="">
+							<input type="text" id = "input" placeholder="请输入商品关键词或者货号" autocomplete="off">
+							<input type="submit" value = "搜索" id = "sub">
+						</form>
+		
+						<div class="shopcar">
+							<i class="iconfont icon-gouwuche"></i>
+							<a href="">我的购物车   &nbsp;&nbsp;></a>
+						</div>
+						<ul>
+							<li><a href="">鞋子</a></li>
+							<li><a href="">薇依床品</a></li>
+							<li><a href="">空气炸锅</a></li>
+							<li><a href="">零食</a></li>
+							<li><a href="">酒</a></li>
+							<li><a href="">羽绒服</a></li>
+							<li><a href="">牛肉</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 导航 -->
+				<div class="nav">
+					<ul>
+						<li>全部商品分类 <i class="iconfont icon-xiangxia"></i></li>
+						<li>首页</li>
+						<span>TV</span>
+						<li>电视直播</li>
+						<li>热卖榜</li>
+						<li>风尚惠</li>
+						<li>品牌店中店</li>
+						<li><i class = "iconfont icon-laba001hover"></i>风尚购物价格解释</li>
+					</ul>
+				</div>
+				<!-- 商品分类下拉列表 -->
+				
+				<!-- banner滚动图 -->
+				<div class="banner">
+					<ul>
+						<li><img src="../images/a.jpg" alt=""></li>
+						<li><img src="../images/b.jpg" alt=""></li>
+						<li><img src="../images/c.jpg" alt=""></li>
+						<li><img src="../images/d.jpg" alt=""></li>
+						<li><img src="../images/e.jpg" alt=""></li>
+						<li><img src="../images/f.jpg" alt=""></li>
+						<li><img src="../images/g.jpg" alt=""></li>
+						<li><img src="../images/h.jpg" alt=""></li>
+					</ul>
+					<ol>
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ol>
+				</div>
+		</div>
+
+		
+
+		<!-- 主要内容 -->
+		<div class="content">
+			<div class="contentin">
+				<!-- 小广告部分 -->
+				<div class="ad">
+					<div class="adin">
+						<a href="#"><img src="../images/53.jpg" alt=""></a>
+						<a href="#"><img src="../images/54.jpg" alt=""></a>
+						<a href="#"><img src="../images/55.jpg" alt=""></a>
+						<a href="#"><img src="../images/56.jpg" alt=""></a>
+						<a href="#"><img src="../images/57.jpg" alt=""></a>
+					</div>
+				</div>
+				
+				<!-- 不重复的第一部分 -->
+				<div class="one">
+					<div class="top">
+						<span>热播推荐</span>
+						<i>热卖排行</i>
+					</div>
+					<div class="bot">
+						<div class="left">
+							<div class="out">
+								<ul>
+									<li>
+										<img src="../images/60.jpg" alt="">
+										<a href="#">泰玛亚高钙配方骆驼乳粉</a>
+										<span>￥498.00</span>
+
+										<p>网站推荐:</p>
+									</li>
+									<li>
+										<img src="../images/60.jpg" alt="">
+										<a href="#">泰玛亚高钙配方骆驼乳粉</a>
+										<span>￥498.00</span>
+
+										<p>网站推荐:</p>
+									</li>
+									<li>
+										<img src="../images/60.jpg" alt="">
+										<a href="#">泰玛亚高钙配方骆驼乳粉</a>
+										<span>￥498.00</span>
+
+										<p>网站推荐:</p>
+									</li>
+									<li>
+										<img src="../images/60.jpg" alt="">
+										<a href="#">泰玛亚高钙配方骆驼乳粉</a>
+										<span>￥498.00</span>
+
+										<p>网站推荐:</p>
+									</li>
+								</ul>
+							</div>
+							<ol>
+								<li class = "active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+						</div>
+						<div class="right">
+							<ul>
+								<li>
+									<img src="../images/64.jpg" alt="">
+									<a href="#">浙锦手工桑蚕长丝被尊享加赠组</a>
+									<span>￥1,999.00</span>
+								</li>
+								<li>
+									<img src="../images/65.jpg" alt="">
+									<a href="#">美苏多功能小N锅1+1组</a>
+									<span>￥268.00</span>
+								</li>
+								<li>
+									<img src="../images/66.jpg" alt="">
+									<a href="#">合园堂马来西亚进口燕窝</a>
+									<span>￥999.00</span>
+								</li>
+								<li>
+									<img src="../images/67.jpg" alt="">
+									<a href="#">歌菲双钻工具精品套组</a>
+									<span>￥1,999.00</span>
+								</li>
+								<li>
+									<img src="../images/68.jpg" alt="">
+									<a href="#">东芝75英寸4K高清AI智能电视</a>
+									<span>￥11,999.00</span>
+								</li>
+								<li>
+									<img src="../images/69.jpg" alt="">
+									<a href="#">宝仕奥莎PRECIOSA风华绝代套组</a>
+									<span>￥111,999.00</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- 重复的部分 -->
+				<div class="same">
+					<div class="top">
+						<span>全球购</span>
+						<ul>
+							<li class = "active">家居用品</li>
+							<li>卧室用品</li>
+							<li>厨浴电器</li>
+						</ul>
+						<div class="line"></div>
+					</div>
+					<div class="bot">
+						<a href=""><img src="../images/3.png" alt=""></a>
+						<aside>
+							<img src="../images/6.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/7.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/8.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/9.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/10.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/11.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+					</div>
+				</div>
+
+				<div class="same">
+					<div class="top">
+						<span>家居生活</span>
+						<ul>
+							<li class = "active">家居用品</li>
+							<li>卧室用品</li>
+							<li>厨浴电器</li>
+						</ul>
+						<div class="line"></div>
+					</div>
+					<div class="bot">
+						<a href=""><img src="../images/3.jpg" alt=""></a>
+						<aside>
+							<img src="../images/12.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/13.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/14.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/15.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/16.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/17.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+					</div>
+				</div>
+
+				<div class="same">
+					<div class="top">
+						<span>配饰配件</span>
+						<ul>
+							<li class = "active">家居用品</li>
+							<li>卧室用品</li>
+							<li>厨浴电器</li>
+						</ul>
+						<div class="line"></div>
+					</div>
+					<div class="bot">
+						<a href=""><img src="../images/2.jpg" alt=""></a>
+						<aside>
+							<img src="../images/18.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/19.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/20.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/21.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/22.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/23.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+					</div>
+				</div>
+
+				<div class="same">
+					<div class="top">
+						<span>食品健康</span>
+						<ul>
+							<li class = "active">家居用品</li>
+							<li>卧室用品</li>
+							<li>厨浴电器</li>
+						</ul>
+						<div class="line"></div>
+					</div>
+					<div class="bot">
+						<a href=""><img src="../images/1.jpg" alt=""></a>
+						<aside>
+							<img src="../images/24.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/25.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/26.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/27.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/28.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/29.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+					</div>
+				</div>
+
+				<div class="same">
+					<div class="top">
+						<span>美容美发</span>
+						<div class="line"></div>
+					</div>
+					<div class="bot">
+						<a href=""><img src="../images/3.png" alt=""></a>
+						<aside>
+							<img src="../images/6.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/7.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/8.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/9.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/10.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/11.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+					</div>
+				</div>
+
+				<div class="same">
+					<div class="top">
+						<span>保健养生</span>
+						<ul>
+							<li class = "active">家居用品</li>
+							<li>卧室用品</li>
+							<li>厨浴电器</li>
+						</ul>
+						<div class="line"></div>
+					</div>
+					<div class="bot">
+						<a href=""><img src="../images/3.jpg" alt=""></a>
+						<aside>
+							<img src="../images/12.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/13.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/14.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/15.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/16.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/17.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+					</div>
+				</div>
+
+				<div class="same">
+					<div class="top">
+						<span>数码家电</span>
+						<ul>
+							<li class = "active">家居用品</li>
+							<li>卧室用品</li>
+							<li>厨浴电器</li>
+						</ul>
+						<div class="line"></div>
+					</div>
+					<div class="bot">
+						<a href=""><img src="../images/2.jpg" alt=""></a>
+						<aside>
+							<img src="../images/18.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/19.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/20.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/21.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/22.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/23.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+					</div>
+				</div>
+
+				<div class="same">
+					<div class="top">
+						<span>食品健康</span>
+						<ul>
+							<li class = "active">家居用品</li>
+							<li>卧室用品</li>
+							<li>厨浴电器</li>
+						</ul>
+						<div class="line"></div>
+					</div>
+					<div class="bot">
+						<a href=""><img src="../images/1.jpg" alt=""></a>
+						<aside>
+							<img src="../images/24.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/25.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/26.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/27.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/28.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+						<aside>
+							<img src="../images/29.jpg" alt="">
+							<a href="">日本进口山本汉方控压茶压流茶</a>
+							<span>￥166.00</span>
+						</aside>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footin">
+				<div class="cont">
+					<div class="contin">
+						<ul>
+							<li> <i class="iconfont icon-icon-test"></i> 
+								<div>
+									<p>手机注册 一步搞定</p>
+									<span>输入手机号-输入验证码-获取手机</span>
+									<span>验证码-设定密码-完成注册</span>
+								</div>
+							</li>
+							<li><i class="iconfont icon-dianhua"></i>
+								<div>
+									<p>型录/电商/新媒体视频招商加盟</p>
+									<span>柳小姐：0791-88110022-8126</span>
+								</div>
+							</li>
+							<li><i class="iconfont icon-zaixiankefu"></i>
+								<div>
+									<p>在线客服</p>
+									<span>24小时客服热线：</span>
+									<span>4001-677-077</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cont2">
+					<div class="cont2in">
+						<div class="left">
+							<img src="../images/45.jpg" alt="">
+							<p>关于风尚购物</p>
+							<span>江西风尚电视购物股份有限公司于2009年9月28日正式成立，公司致力于现代家庭电视购物，是传媒和零售的完美组合。江西电视台风尚购物频道是经国家广电总局批准的全国性的、同时也是江西第一家真正的专业家庭电视购物频道。</span>
+						</div>
+						<div class="right">
+							<ul>
+								<li>帮助中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>支付方式</li>
+								<li>货到付款</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>客户服务</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+							</ul>
+							<ul>
+								<li>会员中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>招商专区</li>
+								<li>货到付款</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>帮助中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+						</div>
+						<p class="ip">ICP经营许可证：赣ICP备15000001号</p>
+						<div class="img">
+							<img src="../images/51.jpg" alt="">
+							<img src="../images/alipay.jpg" alt="">
+							<img src="../images/52.jpg" alt="">
+							<img src="../images/47.jpg" alt="">
+							<img src="../images/50.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="red"></div>
+		</div>
+
+	</div>
+</body>
+</html>

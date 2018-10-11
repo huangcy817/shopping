@@ -1,0 +1,24 @@
+{
+  "name": "shoping",
+  "version": "1.0.0",
+  "description": "风尚购物平台",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "电视购物"
+  ],
+  "author": "huang",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.6.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass-china": "^3.1.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}
