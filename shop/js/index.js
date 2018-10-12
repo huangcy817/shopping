@@ -1,17 +1,11 @@
 define(["jquery"],function($){
 	function address(){
 		// 鼠标划过地址块出来
-		$("#address").mouseenter(function(){
-			$("#throughAddress").css("display","block");
-		})
-		$("#throughAddress").mouseenter(function(){
+		$("#address,#throughAddress").mouseenter(function(){
 			$("#throughAddress").css("display","block");
 		})
 		// 鼠标划出地址块消失
-		$("#address").mouseleave(function(){
-			$("#throughAddress").css("display","none");
-		})
-		$("#throughAddress").mouseleave(function(){
+		$("#address,#throughAddress").mouseleave(function(){
 			$("#throughAddress").css("display","none");
 		})
 
@@ -73,6 +67,25 @@ define(["jquery"],function($){
 			$("#twoCode").css("display","none");
 		})
 
+		// 商品下拉列表
+		$("#selector,#select").mouseenter(function(){
+			$("#select").css("display","block");
+		})
+		$("#selector,#select").mouseleave(function(){
+			$("#select").css("display","none");
+		})
+
+		// 下拉列表的详情页
+		$("#select,#about").mouseenter(function(){
+			$("#about,#select").css("display","block");
+		})
+		$("#select,#about").mouseleave(function(){
+			$("#about,#select").css("display","none");
+		})
+
+		// 获得当前页面宽度赋值给banner图设置图片大小
+		$(".banner ul li img").css("width",$(document).width());
+		$(".banner ul").css("width",$(document).width()*$(".banner ul").find("li").size());
 
 	}
 

@@ -233,15 +233,24 @@ body, html {
         border-radius: 3px;
         background: #fc4c65; }
   .header .banner {
-    width: 100%; }
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    position: relative; }
+    .header .banner img {
+      height: 420px;
+      display: block; }
     .header .banner ul {
-      width: 100%;
-      height: 398px;
-      overflow: hidden; }
+      height: 420px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer; }
+      .header .banner ul li {
+        float: left; }
     .header .banner ol {
       position: absolute;
       left: 550px;
-      bottom: 55px;
+      bottom: 10px;
       z-index: 2; }
       .header .banner ol li {
         width: 10px;
@@ -294,10 +303,12 @@ body, html {
         .content .contentin .one .bot .left .out {
           width: 400px;
           height: 664px;
+          position: relative;
           overflow: hidden; }
           .content .contentin .one .bot .left .out ul {
-            width: 1200px;
+            width: 2000px;
             height: 664px;
+            position: absolute;
             border-top: 1px solid #e6e6e6; }
             .content .contentin .one .bot .left .out ul li {
               width: 360px;
@@ -309,7 +320,8 @@ body, html {
               .content .contentin .one .bot .left .out ul li img {
                 width: 360px;
                 height: 360px;
-                margin-bottom: 60px; }
+                margin-bottom: 60px;
+                cursor: pointer; }
               .content .contentin .one .bot .left .out ul li a {
                 display: block;
                 color: #77778c; }
@@ -641,3 +653,90 @@ body, html {
   display: none;
   border: 1px solid #c9c4be;
   top: 420px; }
+
+#select {
+  width: 205px;
+  height: 401px;
+  position: absolute;
+  left: 74px;
+  top: 192px;
+  display: none;
+  background: #fc4c65; }
+  #select li {
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer; }
+    #select li:hover {
+      background: #cc4155; }
+    #select li .iconfont {
+      font-size: 30px;
+      float: left;
+      margin: 0 20px; }
+    #select li span {
+      float: right;
+      margin-right: 20px; }
+  #select li:first-child {
+    margin-top: 15px; }
+
+#about {
+  width: 900px;
+  height: 401px;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  display: none;
+  left: 279px; }
+  #about ul {
+    width: 860px;
+    border-bottom: 1px dashed #666;
+    height: 60px;
+    margin-left: 20px; }
+    #about ul li {
+      float: left;
+      font-size: 14px;
+      margin-top: 30px;
+      height: 12px;
+      line-height: 12px; }
+      #about ul li a {
+        padding: 0 14px;
+        border-right: 1px solid #666;
+        display: block;
+        color: #333; }
+        #about ul li a:hover {
+          color: #fc4c65; }
+    #about ul li:first-child {
+      width: 83px;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      border: 1px solid #666;
+      margin-top: 20px;
+      margin-right: 10px;
+      border-radius: 20px 20px; }
+  #about p {
+    margin: 30px 0 30px 30px;
+    color: #333; }
+  #about ol {
+    margin-left: 30px; }
+    #about ol li {
+      float: left;
+      width: 150px;
+      height: 222px;
+      margin-right: 20px; }
+      #about ol li img {
+        width: 150px;
+        height: 150px; }
+      #about ol li a {
+        display: block;
+        font-size: 12px;
+        color: #333;
+        margin-top: 20px; }
+      #about ol li span {
+        display: block;
+        margin-top: 15px;
+        font-size: 14px; }
+        #about ol li span i {
+          font-weight: bolder;
+          color: #d91404; }
