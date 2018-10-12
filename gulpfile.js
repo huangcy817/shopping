@@ -35,6 +35,13 @@ gulp.task("copy_js",function(){
 			.pipe(connect.reload());
 })
 
+// 处理json数据
+gulp.task("json",function(){
+	return gulp.src(["*.json","!package.json"])
+			.pipe(gulp.dest("shop/data"))
+			.pipe(connect.reload());
+})
+
 // 处理css
 const rename = require("gulp-rename");
 const minifyCss = require("gulp-clean-css");
@@ -51,7 +58,7 @@ gulp.task("css",function(){
 })
 
 //绑定所有事件 
-gulp.task("bulid",["copyIndex","copyImg","js","css","copy_js","base"],function(){
+gulp.task("bulid",["copyIndex","copyImg","js","css","copy_js","json"],function(){
 	console.log('项目创建完成');
 });
 // 添加监听
@@ -61,7 +68,7 @@ gulp.task("watch",function(){
 	gulp.watch(["main.js"],["js"]);
 	gulp.watch(["index.scss"],["css"]);
 	gulp.watch(["*.js","!gulpfile.js"],["copy_js"]);
-	gulp.watch(["_base.scss"],["base"])
+	gulp.watch(["*.json","!package.json"],["json"]);
 })
 
 // 启动服务器

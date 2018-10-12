@@ -227,10 +227,32 @@ body,html{
 				line-height: 35px;
 				font-size: 12px;
 				color:#777;
+				overflow: hidden;
 				padding: 0 45px;
 				&:hover{
 					color:$color;
 					cursor: pointer;
+				}
+				i{
+					display: inline;
+				}
+				p{
+					height:105px;
+					display: inline-block;
+					position: relative;
+					top:-35px;
+					width:100%;
+					left:30px;
+					a{
+						color:#777;
+						height:35px;
+						width:100%;
+						overflow: hidden;
+						display: block;
+						&:hover{
+							color:$color;
+						}
+					}
 				}
 			}
 			li:first-child{
@@ -279,6 +301,7 @@ body,html{
 		height:420px;
 		overflow: hidden;
 		position: relative;
+		z-index:1;
 		img{
 			height:420px;
 			display: block;
@@ -286,6 +309,7 @@ body,html{
 		ul{
 			height:420px;
 			position:relative;
+			z-index:1;
 			overflow: hidden;
 			cursor: pointer;
 			li{
@@ -502,6 +526,7 @@ body,html{
 					li{
 						float:left;
 						height:35px;
+						cursor: pointer;
 						line-height: 35px;
 						font-size: 12px;
 						padding:0 15px;
@@ -701,6 +726,7 @@ body,html{
 // 鼠标划过出现地址块
 .header{
 	#throughAddress{
+		z-index: 10;
 		display: none;
 		width:420px;
 		height:auto;
@@ -762,14 +788,15 @@ body,html{
 			margin-bottom:30px;
 			li{
 				float:left;
-				padding:5px 30px;
+				padding:5px 0;
+				width:100px;
 				font-size: 12px;
 				a{
 					display: block;
 					line-height: 35px;
 					text-align: center;
 					color:black;
-					width:45px;
+					width:auto;
 					height:35px;
 					&:hover{
 						background: #FDEBBF;
@@ -827,6 +854,7 @@ body,html{
 	width:205px;
 	height:401px;
 	position: absolute;
+	z-index :10;
 	left:74px;
 	top:192px;
 	display: none;
@@ -859,6 +887,7 @@ body,html{
 
 // 商品全部列表划入弹出的商品详情
 #about{
+	z-index:10;
 	width:900px;
 	height:401px;
 	background: rgba(255,255,255,0.7);

@@ -22,16 +22,79 @@ define(["jquery"],function($){
 		})
 
 		// 选择地址
-		$("#throughAddress").find("ul").find("li").click(function(){
-			$("#olAdd").find("li").eq($(this).parent().index()-3).text($(this).text()).attr("class","");
-			$("#olAdd").find("li").eq($(this).parent().index()-2).text("请选择").attr("class","active");
-			$("#throughAddress").find("ul").css("display","none").eq($(this).parent().index()-2).css("display","block");
-			if(($(this).parent().index()-3) == 2){
-				$("#address").text($("#olAdd").text());
-				$("#ul1").css("display","block");
-				$("#province").attr("class","active");
-				$("#throughAddress").css("display","none");
+			var mid = new Array();
+			$("#throughAddress #ul1").on("click","li",function(){
+				mid.length = 0;
+			})
+			$("#throughAddress").find("ul").on("click","li",function(){
+				$("#address,#throughAddress").off("mouseleave");
+				$("#olAdd").find("li").eq($(this).parent().index()-3).text($(this).text()).attr("class","");
+				$("#olAdd").find("li").eq($(this).parent().index()-2).text("请选择").attr("class","active");
+				$("#throughAddress").find("ul").css("display","none").eq($(this).parent().index()-2).css("display","block");
+				if(($(this).parent().index()-3) == 2){
+					$("#address").text($("#olAdd").text());
+					$("#ul1").css("display","block");
+					$("#province").attr("class","active");
+					$("#throughAddress").css("display","none");
+					$("#address,#throughAddress").mouseleave(function(){
+						$("#throughAddress").css("display","none");
+					})
+				}
+				mid.push($(this).text());
+				// 地址栏市的数据
+				$.ajax({
+					url:"data/address.json",
+					type:"GET",
+					success:function(data){
+						var citys = "";
+						for(var i = 0; i < data.length; i++){
+							for(var j = 0; j < data[i].city.length;j++)
+								if(data[i].name == mid[0]){
+									citys += `<li><a href="#">${data[i].city[j].name}</a></li>`;
+								}
+						}
+						$("#throughAddress #ul2").html(citys);
 
+
+					},
+					error:function(msg){
+						alert(msg);
+					}
+			})
+
+			// 地址栏区的数据
+			$.ajax({
+				url:"data/address.json",
+				type:"GET",
+				success:function(data){
+					var areas = "";
+					for(var i = 0 ; i < data.length; i++){
+						for(var j = 0; j < data[i].city.length; j++){
+							for(var k = 0; k < data[i].city[j].area.length; k++){
+								if(data[i].city[j].name == mid[1]){
+									areas += `<li><a href="#">${data[i].city[j].area[k]}</a></li>`;
+								}
+							}
+						}
+					}
+					$("#throughAddress #ul3").html(areas);
+				}
+			})
+		})
+
+		// 地址栏省数据
+		$.ajax({
+			url:"data/address.json",
+			type:"GET",
+			success:function(data){
+				var province = "";
+				for(var i = 0; i < data.length;i++){
+					province += `<li><a href="#">${data[i].name}</a></li>`;
+				}
+				$("#throughAddress #ul1").html(province);
+			},
+			error:function(msg){
+				alert(msg);
 			}
 		})
 
@@ -85,7 +148,29 @@ define(["jquery"],function($){
 
 		// 获得当前页面宽度赋值给banner图设置图片大小
 		$(".banner ul li img").css("width",$(document).width());
+		// 给banner的ul设置宽度
 		$(".banner ul").css("width",$(document).width()*$(".banner ul").find("li").size());
+
+		// 小喇叭后的字向上滚动
+		var num = 2;	
+		function tab(){
+			$("#trumpet").animate({top:-35 * num},500,function(){
+				if(num++ == 3){
+					$("#trumpet").css("top","-35px");
+					num = 2;
+				}
+			});
+		}
+		var timer = setInterval(function(){
+					tab();
+		},2500);
+
+		// 主要内容的划过出现内容
+		$(".same .top ul").find("li").mouseover(function(){
+			$(this).parent().find("li").attr("class","");
+			$(this).attr("class","active");
+			$(this).parent().parent().parent().find(".bot").css("display","none").eq($(this).index()).css("display","block");
+		})
 
 	}
 

@@ -198,10 +198,28 @@ body, html {
         line-height: 35px;
         font-size: 12px;
         color: #777;
+        overflow: hidden;
         padding: 0 45px; }
         .header .nav ul li:hover {
           color: #fc4c65;
           cursor: pointer; }
+        .header .nav ul li i {
+          display: inline; }
+        .header .nav ul li p {
+          height: 105px;
+          display: inline-block;
+          position: relative;
+          top: -35px;
+          width: 100%;
+          left: 30px; }
+          .header .nav ul li p a {
+            color: #777;
+            height: 35px;
+            width: 100%;
+            overflow: hidden;
+            display: block; }
+            .header .nav ul li p a:hover {
+              color: #fc4c65; }
       .header .nav ul li:first-child {
         width: 135px;
         height: 35px;
@@ -236,13 +254,15 @@ body, html {
     width: 100%;
     height: 420px;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    z-index: 1; }
     .header .banner img {
       height: 420px;
       display: block; }
     .header .banner ul {
       height: 420px;
       position: relative;
+      z-index: 1;
       overflow: hidden;
       cursor: pointer; }
       .header .banner ul li {
@@ -408,6 +428,7 @@ body, html {
         .content .contentin .same .top ul li {
           float: left;
           height: 35px;
+          cursor: pointer;
           line-height: 35px;
           font-size: 12px;
           padding: 0 15px; }
@@ -555,6 +576,7 @@ body, html {
     background: #f12e24; }
 
 .header #throughAddress {
+  z-index: 10;
   display: none;
   width: 420px;
   height: auto;
@@ -610,14 +632,15 @@ body, html {
     margin-bottom: 30px; }
     .header #throughAddress ul li {
       float: left;
-      padding: 5px 30px;
+      padding: 5px 0;
+      width: 100px;
       font-size: 12px; }
       .header #throughAddress ul li a {
         display: block;
         line-height: 35px;
         text-align: center;
         color: black;
-        width: 45px;
+        width: auto;
         height: 35px; }
         .header #throughAddress ul li a:hover {
           background: #FDEBBF; }
@@ -658,6 +681,7 @@ body, html {
   width: 205px;
   height: 401px;
   position: absolute;
+  z-index: 10;
   left: 74px;
   top: 192px;
   display: none;
@@ -682,6 +706,7 @@ body, html {
     margin-top: 15px; }
 
 #about {
+  z-index: 10;
   width: 900px;
   height: 401px;
   background: rgba(255, 255, 255, 0.7);
