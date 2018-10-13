@@ -540,8 +540,9 @@ body,html{
 			}
 			.bot{
 				// overflow: hidden;
+				display: none;
 				height:789px;
-				img{
+				#bigImg img{
 					float:left;
 				}
 				aside{
@@ -890,7 +891,7 @@ body,html{
 	z-index:10;
 	width:900px;
 	height:401px;
-	background: rgba(255,255,255,0.7);
+	background: rgba(255,255,255,0.8);
 	position: absolute;
 	display: none;
 	left:279px;
@@ -941,6 +942,7 @@ body,html{
 			img{
 				width:150px;
 				height:150px;
+				cursor: pointer;
 			}
 			a{
 				display: block;

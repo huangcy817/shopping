@@ -7,7 +7,7 @@ require.config({
 		"parabola":"parabola",
 	},
 	shim:{
-		"jquery.cookie":"jquery-1.11.1",
+		"cookie":"jquery",
 		"parabola":{
 			exports:"_"
 		}
@@ -21,7 +21,9 @@ require(["jquery","index","scroll","data","json"],function($,index,scroll,data,j
 	scroll.scroll($(".banner"),"left",$(document).width());
 	scroll.scroll($(".one .bot .left"),"left","400");
 
-	// 处理数据的地方
+	// 处理数据的js
 	json.select();
+	json.one();
+	json.same();
 
 })

@@ -437,8 +437,9 @@ body, html {
           border-bottom: 2px solid #fafafa;
           margin-bottom: -2px; }
     .content .contentin .same .bot {
+      display: none;
       height: 789px; }
-      .content .contentin .same .bot img {
+      .content .contentin .same .bot #bigImg img {
         float: left; }
       .content .contentin .same .bot aside {
         width: 280px;
@@ -709,7 +710,7 @@ body, html {
   z-index: 10;
   width: 900px;
   height: 401px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   position: absolute;
   display: none;
   left: 279px; }
@@ -752,7 +753,8 @@ body, html {
       margin-right: 20px; }
       #about ol li img {
         width: 150px;
-        height: 150px; }
+        height: 150px;
+        cursor: pointer; }
       #about ol li a {
         display: block;
         font-size: 12px;

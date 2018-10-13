@@ -39,6 +39,7 @@ define(["jquery"],function($){
 					$("#address,#throughAddress").mouseleave(function(){
 						$("#throughAddress").css("display","none");
 					})
+					
 				}
 				mid.push($(this).text());
 				// 地址栏市的数据
@@ -161,12 +162,15 @@ define(["jquery"],function($){
 				}
 			});
 		}
-		var timer = setInterval(function(){
-					tab();
-		},2500);
+		var timer = setInterval(tab,2500);
+		$("#trumpet").hover(function(){
+			clearInterval(timer);
+		},function(){
+			timer = setInterval(tab,2500);
+		})
 
 		// 主要内容的划过出现内容
-		$(".same .top ul").find("li").mouseover(function(){
+		$(".contentin").on("mouseover",".same .top ul li",function(){
 			$(this).parent().find("li").attr("class","");
 			$(this).attr("class","active");
 			$(this).parent().parent().parent().find(".bot").css("display","none").eq($(this).index()).css("display","block");

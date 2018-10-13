@@ -50,6 +50,8 @@ define(["jquery"],function($){
 						}
 					})
 					break;
+				default: alert("error");
+					break;
 
 			}
 			
