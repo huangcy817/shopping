@@ -1,0 +1,594 @@
+@import "base";
+
+// 固定侧边栏
+body,html{
+	height:100%;
+}
+
+// 设置在中间
+@mixin auto{
+	margin:0 auto;
+	width:1202px;
+}
+
+.bigbox{
+	width: 100%;
+	height:auto;
+}
+.fixed{
+	height:100%;
+	width:36px;
+	right: 0;
+	top:0;
+	position: fixed;
+	background: #888;
+	z-index: 100;
+	ul{
+		margin-top:60px;
+		li{
+			height:162px;
+			width:27px;
+			border-top:1px solid #fff;
+			margin-left:4px;
+			color:#fff;
+			font-size: 12px;
+			text-align: center;
+			overflow: hidden;
+
+
+			span{
+				display: block;
+				width:12px;
+				height:50px;
+				color:#eee;
+				margin:42px 0 20px 7px;
+				cursor: pointer;
+			}
+
+			p{
+				width:20px;
+				height:20px;
+				margin-left:5px;
+				border-radius: 10px;
+				background: #f43600;
+			}
+		}
+	}
+}
+// 头部区域
+.header{
+	$color:#fc4c65;
+
+	height:auto;
+	// 头部顶部区域
+	.top{
+		width:100%;
+		background: #f2f2f2;
+		height:36px;
+		border-bottom:1px solid #e5e5e5;
+	
+		.topin{
+			@include auto;
+			background: #f2f2f2;
+			font-size: 12px;
+			color:#6c6c6c;
+			ul{
+				height:36px;
+				float:left;
+				line-height: 36px;
+				li{
+					float:left;
+					padding:0 5px;
+					a{
+						display: block;
+						color:#6c6c6c;
+						&:hover{
+							color:$color;
+						}
+					}
+				}
+
+			}
+			ol{
+				height:36px;
+				float:right;
+				li{
+					float:left;
+					padding:0 5px;
+					height:13px;
+					margin-top:10px;
+					border-right:1px solid #6c6c6c;
+					a{
+						display: block;
+						color:#6c6c6c;
+						padding:0 10px;
+					}
+					.active{
+							color:#fff;
+							display: block;
+							height:30px;
+							margin-top:-5px;
+							font-size: 12px;
+							line-height:30px;
+							border:none;
+							background: $color;
+						}
+
+
+				}
+			}
+		}
+	}
+	// 头部中间位置
+	.cent{
+		width:100%;
+		height:119px;
+		background: #fff;
+
+		.centin{
+			@include auto;
+			background: #fff;
+			height:119px;
+			overflow: hidden;
+			.logo{
+				margin-top:30px;
+				float:left;
+			}
+			.car{
+				float:left;
+				margin-top:50px;
+				margin-left:70px;
+			}
+
+			form{
+				width:574px;
+				height:34px;
+				float:left;
+				border-radius: 5px;
+				margin:45px 0 0 57px;
+				border:3px solid $color;
+				overflow: hidden;
+				#input{
+					outline: none;
+					width:474px;
+					height:34px;
+					float:left;
+					border:0;
+				}
+				#sub{
+					outline: none;
+					width:100px;
+					height:34px;
+					float:left;
+					border:0;
+					font-size: 18px;
+					color:#fff;
+					cursor: pointer;
+					background: $color;
+				}
+			}
+			ul{
+				float:left;
+				margin-top:5px;
+				margin-left:285px;
+				li{
+					float:left;
+					font-size: 12px;
+					margin-left:10px;
+					
+					a{
+						color:#999;
+						&:hover{
+							color:$color;
+						}
+					}
+				}
+			}
+			.shopcar{
+				width:130px;
+				height:38px;
+				float:left;
+				line-height: 38px;
+				margin:45px 0 0 19px;
+				background: #f9f9f9;
+				border:1px solid #d8d8d8;
+				font-size: 14px;
+				a{
+					color:#777;
+					&:hover{
+						color:$color;
+					}
+				}
+
+				.iconfont{
+					margin-left:2px;
+					color:$color;
+				}
+			}
+		}
+	}
+	.nav{
+		width:100%;
+		height:35px;
+		border-bottom: 3px solid $color;
+		ul{
+			@include auto;
+			li{
+				float:left;
+				height:35px;
+				line-height: 35px;
+				font-size: 12px;
+				color:#777;
+				overflow: hidden;
+				padding: 0 45px;
+				&:hover{
+					color:$color;
+					cursor: pointer;
+				}
+				i{
+					display: inline;
+				}
+				p{
+					height:105px;
+					display: inline-block;
+					position: relative;
+					top:-35px;
+					width:100%;
+					left:30px;
+					a{
+						color:#777;
+						height:35px;
+						width:100%;
+						overflow: hidden;
+						display: block;
+						&:hover{
+							color:$color;
+						}
+					}
+				}
+			}
+			li:first-child{
+				width:135px;
+				height:35px;
+				background: $color;
+				text-align: center;
+				line-height: 35px;
+				font-size:16px;
+				color:#fff;
+				padding:0 35px; 
+				i{
+					margin-top:5px;
+					font-size: 25px;
+				}
+			}
+			li:last-child{
+				i{
+					color:#303233;
+					float:left;
+					margin-right:5px;
+				}
+			}
+				li:nth-of-type(3){
+					padding-left:5px;
+				}
+				span{
+					display: inline-block;
+					width:24px;
+					height:16px;
+					float:left;
+					margin-left:30px;
+					margin-top:10px;
+					font-size: 12px;
+					color:#fff;
+					text-align: center;
+					border-radius: 3px;
+					background: $color;
+				}
+			
+
+		}
+	}
+
+}
+
+
+
+
+// 底部
+.footer{
+	width:100%;
+	height:517px;
+	background:#fff;
+	.footin{
+		height:437px;
+		padding-top:50px;
+		.cont{
+			width:100%;
+			height:120px;
+			background: #efefef;
+			.contin{
+				@include auto;
+				height:120px;
+
+				ul{
+					height:120px;
+					float:left;
+					margin-left:45px;
+					li{
+						float:left;
+						width:auto;
+						margin-top:25px;
+						padding-right: 125px;
+
+
+						i{
+							display: inline-block;
+							font-size: 80px;
+							color:#e51d31;
+							float:left;
+							margin-right:10px;
+						}
+						div{
+							display: inline-block;
+							float:left;
+							line-height:20px;
+						}
+						p{
+							color:#595757;
+							font-weight: bold;
+							display: inline-block;
+							margin-top:10px;
+						}
+						span{
+							font-size: 12px;
+							color:#595757;
+							display: block;
+						}
+					}
+				}
+
+			}
+		}
+		.cont2{
+			@include auto;
+			height: 318px;
+			.cont2in{
+				@include auto;
+				.left{
+					float:left;
+					margin-top:45px;
+					img{
+						width:72px;
+						height:122px;
+						display: inline-block;
+						float: left;
+						margin-right:10px;
+					}
+					p{
+						display:inline-block;
+						color:#777;
+						font-weight: bolder;
+						font-size:14px;
+					}
+					span{
+						width:340px;
+						font-size: 12px;
+						display:block;
+						line-height: 20px;
+					}
+					
+				}
+				.right{
+					float:left;
+					margin-bottom: 60px;
+					ul{
+						float:left;
+						margin:28px 0 0 50px;
+						li{
+							font-size: 12px;
+							color:#777;
+							line-height: 25px;
+							&:hover{
+								color:#e6293c;
+								cursor: pointer;
+							}
+						}
+						li:first-child{
+							font-size: 16px;
+							color:#333333;
+							font-weight: bolder;
+						}
+					}
+				}
+				.ip{
+					width:100%;
+					text-align: center;
+					color:#777;
+					font-size: 12px;
+					clear:both;
+					&:hover{
+						color:#f12e24;
+						cursor: pointer;
+					}
+				}
+				
+				.img{
+					float:left;
+					margin-left:280px;
+					margin-top:20px;
+					img{
+						float:left;
+						margin-right:43px;
+					}
+				}
+
+			}
+		}
+	}
+	.red{
+		width:100%;
+		height:30px;
+		background: #f12e24;
+	}
+}
+
+
+// 鼠标划过出现地址块
+.header{
+	
+
+	// 我的风尚区域
+	#my{
+		width:74px;
+		height:60px;
+		position: absolute;
+		left:1020px;
+		top:32px;
+		display: none;
+		background: #fff;
+		border:2px solid #fc4c65;
+		li{
+			a{
+				display: block;
+				font-size:12px;
+				text-align: center;
+				color:#747474;
+				&:hover{
+					color:#fc4c65;
+				}
+			}
+			height:30px;
+			line-height: 30px;
+		}
+		li:first-child{
+			border-bottom: 1px dashed #ccc;
+		}
+	}
+}
+
+// 二维码
+#twoCode{
+	width:136px;
+	height:136px;
+	background: #fff url("../images/222.jpg");
+	position: fixed;
+	left:1177px;
+	display: none;
+	border:1px solid #c9c4be;
+	top:420px;
+}
+
+
+// 商品下拉列表
+#select{
+	width:205px;
+	height:401px;
+	position: absolute;
+	z-index :10;
+	left:74px;
+	top:192px;
+	display: none;
+	background: #fc4c65;
+	li{
+		width:100%;
+		height:52px;
+		line-height: 52px;
+		font-size: 14px;
+		color:#fff;
+		cursor: pointer;
+		&:hover{
+			background: #cc4155;
+		}
+
+		.iconfont{
+			font-size: 30px;
+			float:left;
+			margin:0 20px;
+		}
+		span{
+			float:right;
+			margin-right:20px;
+		}
+	}
+	li:first-child{
+		margin-top:15px;
+	}
+}
+
+// 商品全部列表划入弹出的商品详情
+#about{
+	z-index:10;
+	width:900px;
+	height:401px;
+	background: rgba(255,255,255,0.8);
+	position: absolute;
+	display: none;
+	left:279px;
+	ul{
+		width:860px;
+		border-bottom: 1px dashed #666;
+		height:60px;
+		margin-left:20px;
+		li{
+			float:left;
+			font-size: 14px;
+			margin-top:30px;
+			height:12px;
+			line-height: 12px;
+			a{
+				padding:0 14px;
+				border-right:1px solid #666;
+				display: block;
+				color:#333;
+				&:hover{
+					color:#fc4c65;
+				}
+			}
+		}
+		li:first-child{
+			width:83px;
+			height:26px;
+			line-height: 26px;
+			text-align: center;
+			border:1px solid #666;
+			margin-top:20px;
+			margin-right:10px;
+			border-radius: 20px 20px;
+
+		}
+	}
+	p{
+		margin:30px 0 30px 30px;
+		color:#333;
+	}
+	ol{
+		margin-left:30px;
+		li{
+			float:left;
+			width:150px;
+			height:222px;
+			margin-right:20px;
+			img{
+				width:150px;
+				height:150px;
+				cursor: pointer;
+			}
+			a{
+				display: block;
+				font-size: 12px;
+				color:#333;
+				margin-top:20px;
+			}
+			span{
+				display: block;
+				margin-top:15px;
+				font-size: 14px;
+				i{
+					font-weight: bolder;
+					color:#d91404;
+				}
+			}
+		}
+	}
+}
+

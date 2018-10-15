@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品列表页</title>
+	<link rel="stylesheet" href="../css/same.min.css">
+	<link rel="stylesheet" href="../css/listCont.min.css">
+	<link rel="stylesheet" href="../iconfont/iconfont.css">
+	<script src = "../js/require.js" async = "true" defer data-main = "../js/otherMain.min.js"></script>
+</head>
+<body>
+<!-- 整个外层大盒子 -->
+	<div class = "bigbox">
+		<!-- 右侧固定 -->
+		<div class="fixed">
+			<ul>
+				<li><span>购物车</span><p>0</p></li>
+				<li><span>我的消息</span><p>0</p></li>
+				<li id = "weChat"><span>微信公众号</span></li>
+			</ul>
+		</div>
+		<!-- 二维码 -->
+		<div id = "twoCode"></div>
+
+		<!-- 头部区域 -->
+		<div class="header">
+				<!-- 顶部 -->
+				<div class="top">
+					<div class="topin">
+						<ul>
+							<li>欢迎来到风尚购物</li>
+							<li><a href="">登录</a></li>
+							<li><a href="">注册</a></li>
+						</ul>
+						<ol>
+							<li id = "myf"><a href="" >我的风尚</a></li>
+							<li>4001-677-077</li>
+							<li id = "service"><a href="">客服中心</a></li>
+						</ol>
+					</div>
+				</div>
+
+				<!-- 经过出地址块元素  -->
+				<div id="throughAddress">
+					<div id="x">X</div>
+
+					<ol id = "olAdd">
+						<li class = "active" id = "province">江苏省</li>
+						<li id = "city">南昌市</li>
+						<li id = "area">东湖区</li>
+					</ol>
+					<div class="line"></div>
+						<ul  id = "ul1" style = "display:block"></ul>
+						<ul id = "ul2" style = "display:none"></ul>
+						<ul id = "ul3" style = "display:none"></ul>
+					
+				</div>
+
+				<!-- 我的风尚 -->
+				<ul id = "my">
+					<li><a href="#">我的订单</a></li>
+					<li><a href="#">我的收藏</a></li>
+				</ul>
+
+				<!--头部中间位置 -->
+				<div class="cent">
+					<div class="centin">
+						<img src="../images/46.png" alt="" class="logo">
+						<img src="../images/44.jpg" alt="" class = "car">
+						<form action="">
+							<input type="text" id = "input" placeholder="请输入商品关键词或者货号" autocomplete="off">
+							<input type="submit" value = "搜索" id = "sub">
+						</form>
+		
+						<div class="shopcar">
+							<i class="iconfont icon-gouwuche"></i>
+							<a href="">我的购物车   &nbsp;&nbsp;></a>
+						</div>
+						<ul>
+							<li><a href="">鞋子</a></li>
+							<li><a href="">薇依床品</a></li>
+							<li><a href="">空气炸锅</a></li>
+							<li><a href="">零食</a></li>
+							<li><a href="">酒</a></li>
+							<li><a href="shopList.html">数码家电</a></li>
+							<li><a href="">牛肉</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 导航 -->
+				<div class="nav">
+					<ul>
+						<li id = "selector">全部商品分类 <i class="iconfont icon-xiangxia"></i></li>
+						<li>首页</li>
+						<span>TV</span>
+						<li>电视直播</li>
+						<li>热卖榜</li>
+						<li>风尚惠</li>
+						<li>品牌店中店</li>
+						<li><i class = "iconfont icon-laba001hover"></i>
+							<p id = "trumpet">
+								<a href="">风尚购物价格解释</a>
+								<a href="">江西风尚电视购物相关招标文件下载</a>
+								<a href="">风尚购物价格解释</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<!-- 商品分类下拉列表 -->
+				<ul id="select">
+					
+				</ul>
+				
+				<!-- 商品详细分类弹出框 -->
+				<div id = "about">
+					<ul>
+						<li id = "title">家居生活</li>
+						<li id = "arrow">></li>
+						
+					</ul>
+					<p>相关热门</p>
+					<ol id = "shopList">
+						
+					</ol>
+				</div>
+				
+		</div>
+
+		
+
+		<!-- 主要内容 -->
+		<div class="content">
+			<div class="contentin">
+				<div class="contTop">
+					<ul>
+						<li><a href="">首页</a></li>
+						<li>></li>
+						<li id = "allClass"><a href="">所有类别</a><i class = "iconfont icon-xiangxia"></i></li>
+						<li>></li>
+						<li id = "electron"><a href="">数码家电</a><i class = "iconfont icon-xiangxia"></i></li>
+						<li>></li>
+						<li id = "phone"><a href="">手机</a><i class = "iconfont icon-xiangxia"></i></li>
+					</ul>
+					<div id="allDiv">
+						<a href="">所有类别</a>
+					</div>
+					<div id="elecDiv">
+						<a href="">家居生活</a>
+						<a href="">数码家电</a>
+						<a href="">保健养生</a>
+						<a href="">服饰配件</a>
+						<a href="">美容美发</a>
+						<a href="">食品健康</a>
+						<a href="">珠宝收藏</a>
+					</div>
+
+					<div id="phoneDiv">
+						<a href="">电脑及周边</a>
+						<a href="">日用电器</a>
+						<a href="">数码影音</a>
+						<a href="" style = "color:red">手机</a>
+					</div>
+
+				</div>
+				<div class="classify">
+					<ul>
+						<li>品牌</li>
+						<li class = "active"><a href="">全部</a></li>
+					</ul>
+				</div>
+
+				<div class="contBox">
+					<div class="boxLeft">
+
+						<div class="shopClass top">
+							<div class="boxTop">
+								商品分类
+							</div>
+							<p>所有类别 <i class = "iconfont icon-xiangxia"></i></p>
+							<ul>
+								<li>数码家电</li>
+								<li>家居生活</li>
+								<li>美容美发</li>
+								<li>数码家电</li>
+								<li>家居生活</li>
+								<li>美容美发</li>
+								<li>数码家电</li>
+							</ul>
+						</div>
+
+						<div class="shopHot top">
+							<div class="boxTop">
+								热门商品
+							</div>
+							<ul>
+								<li>
+									<img src="../images/80.jpg" alt="">
+									<a href="">DR.MAXSKIN美白祛斑霜专案组</a>
+									<i>￥199.00</i>
+									<span>已有<s>0</s>人评价</span>
+								</li>
+								<li>
+									<img src="../images/81.jpg" alt="">
+									<a href="">欧格玛肌因焕颜修复妈妈霜</a>
+									<i>￥599.00</i>
+									<span>已有<s>0</s>人评价</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="near top">
+							<p><span>最近浏览</span><b id = "clear">清除记录</b></p>
+							<ul id = "clears">
+								<li>
+									<img src="../images/71.jpg" alt="">
+									<a href="#">欧漫露三色气垫CC霜组合</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="boxRight">
+						<div class="rightTop">
+							<ol>
+								<li>送至：</li>
+								<li id = "address">江西省 南昌市 东湖区</li>
+								<li>排序:</li>
+								<li ><a href="" class = "active">默认 
+								&nbsp;<i class = "iconfont icon-xiaotuziCduan_1"></i></a></li>
+								<li><a href="">价格</a></li>
+								<li><a href="">销量</a></li>
+								<li><a href="">上架时间</a></li>
+								<li>共<s id = "count">6</s>个商品</li>
+							</ol>
+						</div>
+						<ul id = "contUl">
+							<!-- <li>
+								<img src="../images/82.jpg" alt="">
+								<a href="#">欧格玛肌因焕颜修复妈妈霜</a>
+								<i>赠</i><span> 肌因焕颜修复妈妈霜50G*2</span>
+								<s>￥599.00</s>
+								<b>立即订购</b>
+							</li>
+							<li>
+								<img src="../images/80.jpg" alt="">
+								<a href="#">欧格玛肌因焕颜修复妈妈霜</a>
+								<i>赠</i><span> 肌因焕颜修复妈妈霜50G*2</span>
+								<s>￥599.00</s>
+								<b>立即订购</b>
+							</li>
+							<li>
+								<img src="../images/81.jpg" alt="">
+								<a href="#">欧格玛肌因焕颜修复妈妈霜</a>
+								<i>赠</i><span> 肌因焕颜修复妈妈霜50G*2</span>
+								<s>￥599.00</s>
+								<b>立即订购</b>
+							</li>
+							<li>
+								<img src="../images/82.jpg" alt="">
+								<a href="#">欧格玛肌因焕颜修复妈妈霜</a>
+								<i>赠</i><span> 肌因焕颜修复妈妈霜50G*2</span>
+								<s>￥599.00</s>
+								<b>立即订购</b>
+							</li>
+							<li>
+								<img src="../images/83.jpg" alt="">
+								<a href="#">欧格玛肌因焕颜修复妈妈霜</a>
+								<i>赠</i><span> 肌因焕颜修复妈妈霜50G*2</span>
+								<s>￥599.00</s>
+								<b>立即订购</b>
+							</li>
+							<li>
+								<img src="../images/84.jpg" alt="">
+								<a href="#">欧格玛肌因焕颜修复妈妈霜</a>
+								<i>赠</i><span> 肌因焕颜修复妈妈霜50G*2</span>
+								<s>￥599.00</s>
+								<b>立即订购</b>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footin">
+				<div class="cont">
+					<div class="contin">
+						<ul>
+							<li> <i class="iconfont icon-icon-test"></i> 
+								<div>
+									<p>手机注册 一步搞定</p>
+									<span>输入手机号-输入验证码-获取手机</span>
+									<span>验证码-设定密码-完成注册</span>
+								</div>
+							</li>
+							<li><i class="iconfont icon-dianhua"></i>
+								<div>
+									<p>型录/电商/新媒体视频招商加盟</p>
+									<span>柳小姐：0791-88110022-8126</span>
+								</div>
+							</li>
+							<li><i class="iconfont icon-zaixiankefu"></i>
+								<div>
+									<p>在线客服</p>
+									<span>24小时客服热线：</span>
+									<span>4001-677-077</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cont2">
+					<div class="cont2in">
+						<div class="left">
+							<img src="../images/45.jpg" alt="">
+							<p>关于风尚购物</p>
+							<span>江西风尚电视购物股份有限公司于2009年9月28日正式成立，公司致力于现代家庭电视购物，是传媒和零售的完美组合。江西电视台风尚购物频道是经国家广电总局批准的全国性的、同时也是江西第一家真正的专业家庭电视购物频道。</span>
+						</div>
+						<div class="right">
+							<ul>
+								<li>帮助中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>支付方式</li>
+								<li>货到付款</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>客户服务</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+							</ul>
+							<ul>
+								<li>会员中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>招商专区</li>
+								<li>货到付款</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>帮助中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+						</div>
+						<p class="ip">ICP经营许可证：赣ICP备15000001号</p>
+						<div class="img">
+							<img src="../images/51.jpg" alt="">
+							<img src="../images/alipay.jpg" alt="">
+							<img src="../images/52.jpg" alt="">
+							<img src="../images/47.jpg" alt="">
+							<img src="../images/50.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="red"></div>
+		</div>
+
+	</div>
+</body>
+</html>

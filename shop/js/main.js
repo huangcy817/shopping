@@ -5,16 +5,17 @@ require.config({
 		"jquery":"jquery-1.11.1",
 		"cookie":"jquery.cookie",
 		"parabola":"parabola",
+
 	},
 	shim:{
-		"cookie":"jquery",
+		"cookie":["jquery"],
 		"parabola":{
 			exports:"_"
 		}
 	}
 })
 
-require(["jquery","index","scroll","data","json"],function($,index,scroll,data,json){
+require(["jquery","index","scroll","data","json","cookie"],function($,index,scroll,data,json){
 	// 主页面js代码
 	index.address();
 	// 滚动窗口

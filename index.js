@@ -1,4 +1,4 @@
-define(["jquery"],function($){
+define(["jquery","cookie"],function($){
 	function address(){
 		// 鼠标划过地址块出来
 		$("#address,#throughAddress").mouseenter(function(){
@@ -21,7 +21,9 @@ define(["jquery"],function($){
 			$("#throughAddress").find("ul").css("display","none").eq($(this).index()).css("display","block");
 		})
 
-		// 选择地址
+
+
+			// 选择地址
 			var mid = new Array();
 			$("#throughAddress #ul1").on("click","li",function(){
 				mid.length = 0;
@@ -39,7 +41,7 @@ define(["jquery"],function($){
 					$("#address,#throughAddress").mouseleave(function(){
 						$("#throughAddress").css("display","none");
 					})
-					
+
 				}
 				mid.push($(this).text());
 				// 地址栏市的数据

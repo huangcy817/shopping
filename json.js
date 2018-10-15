@@ -1,7 +1,7 @@
 define(["jquery"],function($){
 	function select(){
 		$.ajax({
-			url:"data/select.json",
+			url:"../data/select.json",
 			type:"GET",
 			success:function(data){
 				var left = "";
@@ -42,7 +42,7 @@ define(["jquery"],function($){
 
 	function oneNoRepeat(){
 		$.ajax({
-			url:"data/oneNoRepeat.json",
+			url:"../data/oneNoRepeat.json",
 			type:"GET",
 			success:function(data){
 				var html = "";
@@ -63,7 +63,7 @@ define(["jquery"],function($){
 
 	function same(){
 		$.ajax({
-			url:"data/same.json",
+			url:"../data/same.json",
 			type:"GET",
 			success:function(data){
 				for(var i = 0; i < data.length; i++){

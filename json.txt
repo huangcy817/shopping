@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json</title>
+	<script>
+		var arr = [{
+			iconfont:"icon-shafa",
+			title:"家居生活",
+			tag:["汽车用品","卧室床品","厨浴电器","家居用品"],
+			about:[{
+				name:"日本进口山本汉方控压茶压流茶",
+				img:"../images/1.jpg",
+				price:"￥99.00"
+			},{
+				name:"超润面膜滋润保湿补水-D",
+				img:"../images/6.jpg",
+				price:"￥69.00"
+			},{
+				name:"薏仁保湿面霜175g-D",
+				img:"../images/7.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"肯泰多功能晾晒梯套组",
+				img:"../images/8.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"鸿荣堂祥瑞四圣紫铜壶",
+				img:"../images/9.jpg",
+				price:"￥100.00"
+
+			}]
+		},{
+			iconfont:"icon-kaoxiang",
+			title:"数码家电",
+			tag:["电脑及周边","日用电器","数码影音","手机"],
+			about:[{
+				name:"日本控压茶压流茶",
+				img:"../images/10.jpg",
+				price:"￥199.00"
+			},{
+				name:"薏仁保湿面霜175g-D",
+				img:"../images/11.jpg",
+				price:"￥619.00"
+			},{
+				name:"超润面膜滋润保湿补水-D",
+				img:"../images/12.jpg",
+				price:"￥10.00"
+
+			},{
+				name:"鸿荣堂祥瑞四圣紫铜壶",
+				img:"../images/13.jpg",
+				price:"￥120.00"
+
+			},{
+				name:"肯泰多功能晾晒梯套组",
+				img:"../images/14.jpg",
+				price:"￥300.00"
+
+			}]
+		},{
+			iconfont:"icon-yaowan",
+			title:"保健养生",
+			tag:["保健用品","活动户外"],
+			about:[{
+				name:"超润面膜滋润保湿补水-D",
+				img:"../images/15.jpg",
+				price:"￥99.00"
+			},{
+				name:"日本进口山本汉方控压茶压流茶",
+				img:"../images/16.jpg",
+				price:"￥69.00"
+			},{
+				name:"鸿荣堂祥瑞四圣紫铜壶",
+				img:"../images/17.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"薏仁保湿面霜175g-D",
+				img:"../images/18.jpg",
+				price:"￥100.00"
+
+			}]
+		},{
+			iconfont:"icon-txuzhuanhuan",
+			title:"服饰配件",
+			tag:["鞋服配饰","鞋包","保暖内衣","箱包"],
+			about:[{
+				name:"薏仁保湿面霜175g-D",
+				img:"../images/19.jpg",
+				price:"￥99.00"
+			},{
+				name:"超润面膜滋润保湿补水-D",
+				img:"../images/20.jpg",
+				price:"￥69.00"
+			},{
+				name:"日本进口山本汉方控压茶压流茶",
+				img:"../images/21.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"鸿荣堂祥瑞四圣紫铜壶",
+				img:"../images/22.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"肯泰多功能晾晒梯套组",
+				img:"../images/23.jpg",
+				price:"￥100.00"
+
+			}]
+		},{
+			iconfont:"icon-chuifengji",
+			title:"美容美发",
+			tag:["美容化妆","功能护肤","基础护理"],
+			about:[{
+				name:"超润面膜滋润保湿补水-D",
+				img:"../images/24.jpg",
+				price:"￥69.00"
+			}]
+		},{
+			iconfont:"icon-mifan",
+			title:"食品健康",
+			tag:["茶酒礼品","减肥良品","营养食品"],
+			about:[{
+				name:"日本进口山本汉方控压茶压流茶",
+				img:"../images/25.jpg",
+				price:"￥99.00"
+			},{
+				name:"超润面膜滋润保湿补水-D",
+				img:"../images/26.jpg",
+				price:"￥69.00"
+			},{
+				name:"薏仁保湿面霜175g-D",
+				img:"../images/27.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"肯泰多功能晾晒梯套组",
+				img:"../images/28.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"鸿荣堂祥瑞四圣紫铜壶",
+				img:"../images/29.jpg",
+				price:"￥100.00"
+
+			}]
+		},{
+			iconfont:"icon-zuanshijiezhi",
+			title:"珠宝收藏",
+			tag:["珠宝配饰","收藏品"],
+			about:[{
+				name:"超润面膜滋润保湿补水-D",
+				img:"../images/30.jpg",
+				price:"￥99.00"
+			},{
+				name:"鸿荣堂祥瑞四圣紫铜壶",
+				img:"../images/31.jpg",
+				price:"￥69.00"
+			},{
+				name:"薏仁保湿面霜175g-D",
+				img:"../images/32.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"肯泰多功能晾晒梯套组",
+				img:"../images/33.jpg",
+				price:"￥100.00"
+
+			},{
+				name:"日本进口山本汉方控压茶压流茶",
+				img:"../images/34.jpg",
+				price:"￥10.00"
+
+			}]
+		}];
+		var str = JSON.stringify(arr);
+		document.write(str);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

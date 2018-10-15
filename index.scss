@@ -13,7 +13,7 @@ body,html{
 
 .bigbox{
 	width: 100%;
-	height:2000px;
+	height:auto;
 }
 .fixed{
 	height:100%;
@@ -345,7 +345,8 @@ body,html{
 // 主要内容部分
 .content{
 	width:100%;
-	height:8150px;
+	height:auto;
+	padding-bottom:50px;
 	background: #fafafa;
 	overflow: hidden;
 	.contentin{
