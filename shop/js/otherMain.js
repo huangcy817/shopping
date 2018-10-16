@@ -15,7 +15,7 @@ require.config({
 	}
 })
 
-require(["jquery","other","scroll","data","json","cookie","shopList"],function($,other,scroll,data,json,cookie,shopList){
+require(["jquery","other","scroll","data","json","cookie","shopList","shopDetails"],function($,other,scroll,data,json,cookie,shopList,shopDetails){
 	// 其他页面js代码
 	other.other();
 	shopList.shopList();
@@ -23,5 +23,8 @@ require(["jquery","other","scroll","data","json","cookie","shopList"],function($
 
 	// 处理数据的js
 	json.select();
+
+	// 商品详情页js
+	shopDetails.details();
 
 })
