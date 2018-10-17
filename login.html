@@ -111,12 +111,14 @@
 				<div id="login">
 					<p>用户登录</p>
 
-					<form action="" method = "post">
+					<form action="login_do.php" method = "post">
 						<div>
-							<b><s>*</s>手机号：</b><input type="text"><br>
-							<b><s>*</s>密码/验证码：</b><input type="password"><a href="#">忘记密码？</a><br>
+							<b><s>*</s>手机号：</b><input type="text" name = "tel"><br>
+							<b>图片验证码：</b><input type="text" id = "codeInput"><i id = "code">1234</i><span id = "newCode">看不清，换一张</span> <button id = "getCode">获取短信验证码</button><br>
+							<div id="warning"></div>
+							<b><s>*</s>密码/验证码：</b><input type="password" name = "pwd"><a href="#">忘记密码？</a><br>
 						</div>
-						<b>图片验证码：</b><input type="text" id = "codeInput"><i id = "code">1234</i><span id = "newCode">看不清，换一张</span> <button id = "getCode">获取短信验证码</button><br>
+						
 						<input type="checkbox" id = "rember">记住用户名<br>
 						<input type="submit" value = "登录" id = "entryButton" >
 					</form>
@@ -132,10 +134,11 @@
 					<div class="line">
 						<a href="#">使用手机注册</a>
 					</div>
-					<form action="" method = "post">
+					<form action="enroll_do.php" method = "post">
 						<div>
-							<b><s>*</s>手机号码：</b><input type="text"><br>
-							<b><s>*</s>验证码：</b><input type="text" id = "inputCode"><i id="enrollCode">1234</i><a href="#" id = "codeNew">看不清，换一张</a><br>
+							<b><s>*</s>手机号码：</b><input type="text" name = "tel"><br>
+							<b><s>*</s>验证码：</b><input type="text" id = "inputCode"><i id="enrollCode">1234</i><span id = "codeNew">看不清，换一张</span><br>
+							<div id = "warn"></div>
 							<b><s>*</s>设置登录密码：</b><input type="password" id = "pwd" name = "pwd"><br>
 							<b><s>*</s>再次输入密码：</b><input type="password" id = "surePwd" name = "surePwd"><br>
 						</div>
