@@ -101,8 +101,19 @@ gulp.task("detailsCont",function(){
 			.pipe(connect.reload());
 })
 
+// 登录注册页面sass
+gulp.task("login",function(){
+	return gulp.src("login.scss")
+			.pipe(sass())
+			.pipe(gulp.dest("shop/css"))
+			.pipe(minifyCss())
+			.pipe(rename("login.min.css"))
+			.pipe(gulp.dest("shop/css"))
+			.pipe(connect.reload());
+})
+
 //绑定所有事件 
-gulp.task("bulid",["copyIndex","copyImg","js","indexCss","copy_js","json","copyHtml","sameCss","otherJs","detailsCont","listCont"],function(){
+gulp.task("bulid",["copyIndex","copyImg","js","indexCss","copy_js","json","copyHtml","sameCss","otherJs","detailsCont","listCont","login"],function(){
 	console.log('项目创建完成');
 });
 
@@ -119,6 +130,7 @@ gulp.task("watch",function(){
 	gulp.watch(["otherMain.js"],["otherJs"]);
 	gulp.watch(["listCont.scss"],["listCont"]);
 	gulp.watch(["detailsCont.scss"],["detailsCont"]);
+	gulp.watch(["login.scss"],["login"])
 })
 
 // 启动服务器

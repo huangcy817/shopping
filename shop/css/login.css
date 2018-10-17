@@ -1,0 +1,187 @@
+.content {
+  width: 100%; }
+  .content .contentin {
+    width: 1202px;
+    margin: 0 auto; }
+    .content .contentin #login {
+      width: 998px;
+      height: 284px;
+      border: 1px solid #666666;
+      margin-top: 40px;
+      margin-left: 100px; }
+      .content .contentin #login p {
+        height: 37px;
+        background: #e6e6e6;
+        line-height: 37px;
+        text-indent: 10px;
+        border-bottom: 1px solid #666666; }
+      .content .contentin #login form {
+        height: 193px;
+        float: left;
+        width: 582px;
+        border-right: 1px dashed #e7e7e7;
+        margin-top: 15px;
+        font-size: 12px; }
+        .content .contentin #login form input {
+          outline: none; }
+        .content .contentin #login form b {
+          width: 163px;
+          display: inline-block;
+          text-align: right; }
+          .content .contentin #login form b s {
+            color: red; }
+        .content .contentin #login form div input {
+          height: 20px;
+          width: 264px;
+          margin-top: 20px; }
+        .content .contentin #login form div a {
+          color: #666666;
+          margin-left: 5px; }
+          .content .contentin #login form div a:hover {
+            color: black; }
+        .content .contentin #login form button {
+          width: 110px;
+          height: 25px;
+          border-radius: 5px;
+          background: #dedede;
+          border: 1px solid #cccccc;
+          margin-left: 20px;
+          cursor: pointer; }
+        .content .contentin #login form #code {
+          width: 60px;
+          height: 24px;
+          background: url("../images/code.jpg");
+          margin-left: 10px;
+          display: inline-block;
+          font-size: 18px;
+          letter-spacing: 4px;
+          font-weight: bolder; }
+        .content .contentin #login form #newCode {
+          cursor: pointer;
+          color: #666666;
+          margin-left: 10px; }
+        .content .contentin #login form #codeInput {
+          width: 83px;
+          height: 22px;
+          margin-top: 20px; }
+        .content .contentin #login form #rember {
+          margin: 10px 0 0 163px; }
+        .content .contentin #login form #entryButton {
+          margin: 20px 0 0 163px;
+          width: 85px;
+          height: 31px;
+          background: #fc4c65;
+          border: 0;
+          color: #fff;
+          font-weight: bolder;
+          letter-spacing: 2px; }
+      .content .contentin #login .right {
+        font-size: 14px;
+        padding: 40px;
+        width: 302px;
+        height: 132px;
+        float: left; }
+        .content .contentin #login .right aside {
+          font-weight: bolder;
+          float: left;
+          width: 300px;
+          margin: 0 0 0 24px; }
+        .content .contentin #login .right article {
+          margin: 40px 0 0 20px;
+          color: #666666; }
+        .content .contentin #login .right button {
+          width: 137px;
+          height: 31px;
+          color: #fff;
+          background: #fc4c65;
+          border: 0;
+          margin: 40px 0 0 20px;
+          outline: none;
+          cursor: pointer; }
+    .content .contentin #enroll {
+      width: 982px;
+      height: 592px;
+      border: 1px solid #666666;
+      margin: 40px 0 0 100px;
+      display: none; }
+      .content .contentin #enroll p {
+        height: 37px;
+        line-height: 37px;
+        border-bottom: 1px solid #666;
+        background: #e6e6e6;
+        color: #444;
+        font-size: 16px;
+        font-weight: bolder;
+        text-indent: 5px; }
+        .content .contentin #enroll p span {
+          font-size: 14px;
+          float: right;
+          font-weight: normal;
+          margin-right: 10px; }
+          .content .contentin #enroll p span button {
+            width: 42px;
+            height: 26px;
+            color: #fff;
+            background: #fc4c65;
+            border: 0;
+            outline: none;
+            margin-left: 5px;
+            cursor: pointer; }
+      .content .contentin #enroll .line {
+        width: 910px;
+        margin: 40px 0 0 40px;
+        border-bottom: 1px solid black; }
+        .content .contentin #enroll .line a {
+          display: block;
+          width: 116px;
+          height: 28px;
+          background: #fc4c65;
+          line-height: 28px;
+          color: #fff;
+          text-align: center; }
+      .content .contentin #enroll form {
+        padding: 65px; }
+        .content .contentin #enroll form b {
+          display: inline-block;
+          width: 120px;
+          text-align: left;
+          font-size: 14px;
+          color: #666666;
+          margin-left: 134px; }
+          .content .contentin #enroll form b s {
+            color: red; }
+        .content .contentin #enroll form div input {
+          width: 206px;
+          height: 24px;
+          border: 1px solid #cccccc;
+          outline: none;
+          margin-top: 20px; }
+        .content .contentin #enroll form div #inputCode {
+          width: 86px;
+          height: 24px; }
+        .content .contentin #enroll form #enrollCode {
+          width: 60px;
+          height: 24px;
+          background: url("../images/code.jpg");
+          margin-left: 10px;
+          display: inline-block;
+          font-size: 18px;
+          letter-spacing: 4px;
+          font-weight: bolder; }
+        .content .contentin #enroll form #codeNew {
+          cursor: pointer;
+          color: #666666;
+          font-size: 12px;
+          margin-left: 10px; }
+          .content .contentin #enroll form #codeNew:hover {
+            color: black; }
+        .content .contentin #enroll form #enrollSubmit {
+          margin-left: 310px;
+          margin-top: 20px;
+          width: 127px;
+          height: 27px;
+          line-height: 27px;
+          text-align: center;
+          color: #fff;
+          background: #fc4c65;
+          border: 0; }

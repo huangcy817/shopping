@@ -15,7 +15,7 @@ require.config({
 	}
 })
 
-require(["jquery","index","scroll","data","json","cookie"],function($,index,scroll,data,json){
+require(["jquery","index","scroll","data","json","cookie","other"],function($,index,scroll,data,json,cookie,other){
 	// 主页面js代码
 	index.address();
 	// 滚动窗口
@@ -26,5 +26,8 @@ require(["jquery","index","scroll","data","json","cookie"],function($,index,scro
 	json.select();
 	json.one();
 	json.same();
+
+	// 购物车数字
+	other.carNum();
 
 })

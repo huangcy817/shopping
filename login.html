@@ -2,26 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>商品详情</title>
+	<title>用户登录</title>
 	<link rel="stylesheet" href="../css/same.min.css">
-	<link rel="stylesheet" href="../css/detailsCont.min.css">
+	<link rel="stylesheet" href="../css/login.min.css">
 	<link rel="stylesheet" href="../iconfont/iconfont.css">
 	<script src = "../js/require.js" async = "true" defer data-main = "../js/otherMain.min.js"></script>
 </head>
 <body>
 <!-- 整个外层大盒子 -->
 	<div class = "bigbox">
-		<!-- 右侧固定 -->
-		<div class="fixed">
-			<ul>
-				<li><span>购物车</span><p id = "carNum">0</p></li>
-				<li><span>我的消息</span><p>0</p></li>
-				<li id = "weChat"><span>微信公众号</span></li>
-			</ul>
-		</div>
-		<!-- 二维码 -->
-		<div id = "twoCode"></div>
-
 		<!-- 头部区域 -->
 		<div class="header">
 				<!-- 顶部 -->
@@ -40,21 +29,6 @@
 					</div>
 				</div>
 
-				<!-- 经过出地址块元素  -->
-				<div id="throughAddress">
-					<div id="x">X</div>
-
-					<ol id = "olAdd">
-						<li class = "active" id = "province">江苏省</li>
-						<li id = "city">南昌市</li>
-						<li id = "area">东湖区</li>
-					</ol>
-					<div class="line"></div>
-						<ul  id = "ul1" style = "display:block"></ul>
-						<ul id = "ul2" style = "display:none"></ul>
-						<ul id = "ul3" style = "display:none"></ul>
-					
-				</div>
 
 				<!-- 我的风尚 -->
 				<ul id = "my">
@@ -67,44 +41,12 @@
 					<div class="centin">
 						<img src="../images/46.png" alt="" class="logo">
 						<img src="../images/44.jpg" alt="" class = "car">
-						<form action="">
-							<input type="text" id = "input" placeholder="请输入商品关键词或者货号" autocomplete="off">
-							<input type="submit" value = "搜索" id = "sub">
-						</form>
-		
-						<div class="shopcar">
-							<i class="iconfont icon-gouwuche"></i>
-							<a href="">我的购物车   &nbsp;&nbsp;></a>
-						</div>
-						<ul>
-							<li><a href="">鞋子</a></li>
-							<li><a href="">薇依床品</a></li>
-							<li><a href="">空气炸锅</a></li>
-							<li><a href="">零食</a></li>
-							<li><a href="">酒</a></li>
-							<li><a href="">羽绒服</a></li>
-							<li><a href="">牛肉</a></li>
-						</ul>
 					</div>
 				</div>
 
 				<!-- 导航 -->
 				<div class="nav">
 					<ul>
-						<li id = "selector">全部商品分类 <i class="iconfont icon-xiangxia"></i></li>
-						<li>首页</li>
-						<span>TV</span>
-						<li>电视直播</li>
-						<li>热卖榜</li>
-						<li>风尚惠</li>
-						<li>品牌店中店</li>
-						<li><i class = "iconfont icon-laba001hover"></i>
-							<p id = "trumpet">
-								<a href="">风尚购物价格解释</a>
-								<a href="">江西风尚电视购物相关招标文件下载</a>
-								<a href="">风尚购物价格解释</a>
-							</p>
-						</li>
 					</ul>
 				</div>
 				<!-- 商品分类下拉列表 -->
@@ -165,139 +107,42 @@
 		<!-- 主要内容 -->
 		<div class="content">
 			<div class="contentin">
-			<!-- 加入购物车弹出窗口 -->
-				<div id="shopcar">
-					<p>提示信息<button><img src="../images/x.png" alt="">关闭</button></p>
-					<span>您所选购的商品已经成功放入购物车!</span>
-					<s><< 继续购物</s>
-					<b>查看购物车</b>
-				</div>
-				<ul id = "load">
-					<li><a href="">首页</a></li>
-					<li>></li>
-					<li><a href="">所有类别</a></li>
-					<li>></li>
-					<li><a href="">服饰配件</a></li>
-					<li>></li>
-					<li><a href="">手表</a></li>
-					<li>></li>
-					<li><a href=""> POLOALAN艺术镂空钻机械表</a></li>
-				</ul>
-				<div class="mainCont">
-					<div class="main1">
-						<i class="iconfont icon-xiaotuziCduan_1" id = "up"></i>
-						<ul>
-							<li>
-								<img src="../images/8.jpg" alt="">
-							</li>
-							<li>
-								<img src="../images/6.jpg" alt="">
-							</li>
-							<li>
-								<img src="../images/10.jpg" alt="">
-							</li>
-						</ul>
-						<i class="iconfont icon-xiaotuziCduan_" id = "down"></i>
-					</div>
-					<div class="main2">
-						<div id = "opacity"></div>
-						<img src="../images/10.jpg" alt="">
-						<p><span>分享到：</span><i class = "iconfont icon-star"><s>收藏商品</s></i></p>
-					</div>
-					<div class="main3">
-					<!-- 放大镜 -->
-					<div id="bigImg">
-						<img src="../images/10.jpg" alt="">
-					</div>
-						<p>POLOALAN艺术镂空钻机械表</p>
-						商品货号：<b id = "shopNum">315395</b>
-						<div class="info">
-							<span>风尚价:<s>￥999.00</s></span>
-							<span>促销信息：<i>买赠</i><b>POLOALAN女士计时腕表*1，POLOALAN 经典情侣腕表男表*1；POLOALAN 经典情侣女表*1、时尚手包*1</b></span>
+				<!-- 登录 -->
+				<div id="login">
+					<p>用户登录</p>
 
+					<form action="" method = "post">
+						<div>
+							<b><s>*</s>手机号：</b><input type="text"><br>
+							<b><s>*</s>密码/验证码：</b><input type="password"><a href="#">忘记密码？</a><br>
 						</div>
-						<ul>
-							<li>送至：</li>
-							<li id = "address">江西省 南昌市 东湖区</li>
-						</ul>
-						<div id = "choose">
-							<button id = "reduce">-</button>
-							<input type="text" value = "1">
-							<button id = "add">+</button>
-						</div>
-							<h6>库存状况：有库存</h6><br>
-							<button id = "buy">立即购买</button>
-							<button id = "car">加入购物车</button>
-					</div>
-					<div class="main4">
-						<img src="../images/90.jpg" alt="">
-						<p>查看往期电视商品</p>
+						<b>图片验证码：</b><input type="text" id = "codeInput"><i id = "code">1234</i><span id = "newCode">看不清，换一张</span> <button id = "getCode">获取短信验证码</button><br>
+						<input type="checkbox" id = "rember">记住用户名<br>
+						<input type="submit" value = "登录" id = "entryButton" >
+					</form>
+					<div class="right">
+						<aside>您还不是风尚购物用户？</aside>
+						<article>现在免费注册成为风尚购物会员，便能立刻享受便宜又放心的购物体验。</article>
+						<button id = "changeEnroll">注册新用户</button>
 					</div>
 				</div>
-				<div class="downDiv">
-					<div class="downLeft">
-						<div class="sameClass sBox">
-							<p>同类商品</p>
-							<ul>
-								<li>
-									<img src="../images/91.jpg" alt="">
-									<span>骆驼男士休闲鞋组</span>
-									<s>￥299.00</s>
-								</li>
-								<li>
-									<img src="../images/92.jpg" alt="">
-									<span>瑞士MIBATON家居鞋组</span>
-									<s>￥169.00</s>
-								</li>
-								<li>
-									<img src="../images/93.jpg" alt="">
-									<span>法国EML前扣5D微雕内衣组</span>
-									<s>￥299.00</s>
-								</li>
-							</ul>
-						</div>
-						<div class="pastBox sBox">
-							<p>您浏览过的商品</p>
-							<ul>
-								<li>
-									<img src="../images/25.jpg" alt="">
-									<span>POLOALAN艺术镂空钻机械表</span>
-								</li>
-								<li>
-									<img src="../images/26.jpg" alt="">
-									<span>法国SUGAR Y9双卡双待4G手机</span>
-								</li>
-								<li>
-									<img src="../images/4.jpg" alt="">
-									<span>东芝65英寸4K曲面AI智能电视</span>
-								</li>
-							</ul>
-						</div>
+				<!-- 注册 -->
+				<div id="enroll">
+					<p>注册新用户<span>我已经注册，现在就<button id = "changeLogin">登录</button></span></p>
+					<div class="line">
+						<a href="#">使用手机注册</a>
 					</div>
-					<div class="downRight">
-						<ul>
-							<li class = "active">商品介绍</li>
-							<li>规格参数</li>
-							<li>支付/配送/退换货</li>
-							<li>商品评价(0)</li>
-						</ul>
-						<div style = "display:block">
-							<img src="../images/95.jpg" alt="">
-						</div>
+					<form action="" method = "post">
 						<div>
-							<img src="../images/96.jpg" alt="">
+							<b><s>*</s>手机号码：</b><input type="text"><br>
+							<b><s>*</s>验证码：</b><input type="text" id = "inputCode"><i id="enrollCode">1234</i><a href="#" id = "codeNew">看不清，换一张</a><br>
+							<b><s>*</s>设置登录密码：</b><input type="password" id = "pwd" name = "pwd"><br>
+							<b><s>*</s>再次输入密码：</b><input type="password" id = "surePwd" name = "surePwd"><br>
 						</div>
-						<div>
-							<img src="../images/97.jpg" alt="">
-						</div>
-						<div>
-							<img src="../images/98.jpg" alt="">
-						</div>
-					</div>
+						<input type="submit" value = "注册" id = "enrollSubmit">
+					</form>
 				</div>
-
 			</div>
-
 		</div>
 
 		<!-- 底部 -->

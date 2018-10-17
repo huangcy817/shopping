@@ -14,7 +14,7 @@
 		<!-- 右侧固定 -->
 		<div class="fixed">
 			<ul>
-				<li><span>购物车</span><p>0</p></li>
+				<li><span>购物车</span><p id = "carNum">0</p></li>
 				<li><span>我的消息</span><p>0</p></li>
 				<li id = "weChat"><span>微信公众号</span></li>
 			</ul>
@@ -165,6 +165,13 @@
 		<!-- 主要内容 -->
 		<div class="content">
 			<div class="contentin">
+			<!-- 加入购物车弹出窗口 -->
+				<div id="shopcar">
+					<p>提示信息<button><img src="../images/x.png" alt="">关闭</button></p>
+					<span>您所选购的商品已经成功放入购物车!</span>
+					<s><< 继续购物</s>
+					<b>查看购物车</b>
+				</div>
 				<ul id = "load">
 					<li><a href="">首页</a></li>
 					<li>></li>
@@ -203,7 +210,7 @@
 						<img src="../images/10.jpg" alt="">
 					</div>
 						<p>POLOALAN艺术镂空钻机械表</p>
-						商品货号：315391
+						商品货号：<b id = "shopNum">315395</b>
 						<div class="info">
 							<span>风尚价:<s>￥999.00</s></span>
 							<span>促销信息：<i>买赠</i><b>POLOALAN女士计时腕表*1，POLOALAN 经典情侣腕表男表*1；POLOALAN 经典情侣女表*1、时尚手包*1</b></span>
@@ -216,7 +223,7 @@
 						<div id = "choose">
 							<button id = "reduce">-</button>
 							<input type="text" value = "1">
-							<button id = "add ">+</button>
+							<button id = "add">+</button>
 						</div>
 							<h6>库存状况：有库存</h6><br>
 							<button id = "buy">立即购买</button>
@@ -282,6 +289,9 @@
 						</div>
 						<div>
 							<img src="../images/97.jpg" alt="">
+						</div>
+						<div>
+							<img src="../images/98.jpg" alt="">
 						</div>
 					</div>
 				</div>

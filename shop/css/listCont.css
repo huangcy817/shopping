@@ -276,7 +276,8 @@
               color: #d91404;
               font-weight: bolder;
               font-size: 12px;
-              margin-left: 6px; }
+              margin-left: 6px;
+              display: block; }
             .content .contentin .contBox .boxRight ul li b {
               display: block;
               width: 126px;

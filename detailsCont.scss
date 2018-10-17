@@ -388,3 +388,60 @@
 	left:620px;
 	top:515px;
 }
+
+// 购物车提示窗口
+#shopcar{
+	width:438px;
+	height:148px;
+	border:1px solid #fc4c65;
+	position: absolute;
+	z-index:20;
+	background: #fff;
+	display: none;
+	p{
+		height:33px;
+		background: #fc4c65;
+		line-height: 33px;
+		color:#fff;
+		font-size: 14px;
+		text-indent: 15px;
+		font-weight: bolder;
+		button{
+			background: #fc4c65;
+			border:0;
+			color:#fff;
+			cursor: pointer;
+			height:33px;
+			line-height: 33px;
+			float:right;
+			outline: none;
+			img{
+				float:left;
+				margin-top:10px;
+				margin-right:5px;
+			}
+		}
+	}
+	span{
+		display: block;
+		font-size: 12px;
+		margin:30px 0 15px 100px;
+	}
+	s{
+		font-size: 12px;
+		margin-left:100px;
+		margin-top:20px;
+	}
+	b{
+		margin-left:10px;
+		display: inline-block;
+		font-size: 12px;
+		width:79px;
+		height:27px;
+		background: #fc4d65;
+		text-align: center;
+		line-height: 27px;
+		color:#fff;
+		cursor:pointer;
+	}
+}

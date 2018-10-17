@@ -179,8 +179,22 @@ define(["jquery","cookie"],function($){
 		})
 
 	}
+	// 购物车数字
+	function shopCarNum(){
+		var cookie = $.cookie("shop");
+		if(cookie){	
+			cookie = eval(cookie);
+			var num = 0;
+			for(var i = 0; i < cookie.length; i++){
+				num += cookie[i].num;
+			}
+			$("#carNum").text(num);
+		}
+
+	}
 
 	return {
 		other:other,
+		carNum:shopCarNum
 	}
 })
