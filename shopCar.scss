@@ -1,0 +1,84 @@
+.content{
+	width:100%;
+	height:auto;
+	overflow: hidden;
+	.contentin{
+		margin:0 auto;
+		width:1202px;
+		table{
+			font-size: 14px;
+			margin-left:100px;
+			margin-top:50px;
+			border-top:1px solid #dfdfdf;
+			border-bottom:1px solid #dfdfdf;
+			border-spacing: 0;
+			tr{
+				td{
+					input{
+						float:left;
+						margin-top:30px;
+					}
+					img{
+						width:64px;
+						height:64px;
+						float:left;
+						margin:5px;
+					}
+					button{
+						display: inline-block;
+						float:left;
+						background: #fff;
+						border:1px solid #989999;
+						outline: none;
+						cursor: pointer;
+						margin-top:3px;
+					}
+					.buyNum{
+						float:left;
+						width:40px;
+						height:20px;
+						text-align:center;
+						margin:0 5px;
+						border:1px solid #cdcdcd;
+						outline: none;
+					}
+
+					// 收藏与删除
+					a{
+						display: block;
+						color:#323232;
+						&:hover{
+							color:#d10535;
+						}
+					}
+				}
+				#sum{
+					color:#d10535;
+				}
+				
+			}
+			// 表头，第一行tr
+			tr:first-child{
+				background:#f5f5f5;
+				height:30px;
+				line-height: 30px;
+				width:100%;
+				input{
+					margin:10px 0 0 0 ;
+				}
+			}
+		}
+		p{
+			margin-left: 100px;
+			margin-right:150px;
+			text-align: right;
+			height:40px;
+			font-size: 14px;
+			line-height: 40px;
+			border-bottom:1px dashed #bbbbbb;
+			i{
+				color:#d10535;
+			}
+		}
+	}
+}

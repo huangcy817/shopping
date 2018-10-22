@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="../css/same.min.css">
+	<link rel="stylesheet" href="../css/shopCar.min.css">
+	<link rel="stylesheet" href="../iconfont/iconfont.css">
+	<script src = "../js/require.js" async = "true" defer data-main = "../js/otherMain.min.js"></script>
+</head>
+<body>
+<!-- 整个外层大盒子 -->
+	<div class = "bigbox">
+		<!-- 头部区域 -->
+		<div class="header">
+				<!-- 顶部 -->
+				<div class="top">
+					<div class="topin">
+						<ul>
+							<li>欢迎来到风尚购物</li>
+							<li><a href="">登录</a></li>
+							<li><a href="">注册</a></li>
+						</ul>
+						<ol>
+							<li id = "myf"><a href="" >我的风尚</a></li>
+							<li>4001-677-077</li>
+							<li id = "service"><a href="">客服中心</a></li>
+						</ol>
+					</div>
+				</div>
+
+
+				<!-- 我的风尚 -->
+				<ul id = "my">
+					<li><a href="#">我的订单</a></li>
+					<li><a href="#">我的收藏</a></li>
+				</ul>
+
+				<!--头部中间位置 -->
+				<div class="cent">
+					<div class="centin">
+						<img src="../images/46.png" alt="" class="logo">
+						<img src="../images/44.jpg" alt="" class = "car">
+					</div>
+				</div>
+
+				<!-- 导航 -->
+				<div class="nav">
+					<ul>
+					</ul>
+				</div>
+				<!-- 商品分类下拉列表 -->
+				<ul id="select">
+					<li><i class = "iconfont icon-shafa"></i>家居生活<span>></span></li>
+					 <li><i class = "iconfont icon-kaoxiang"></i>数码家电<span>></span></li>
+					 <li><i class = "iconfont icon-yaowan"></i>保健养生<span>></span></li>
+					 <li><i class = "iconfont icon-txuzhuanhuan"></i>服饰配件<span>></span></li>
+					 <li><i class = "iconfont icon-chuifengji"></i>美容美发<span>></span></li>
+					 <li><i class = "iconfont icon-mifan"></i>食品健康<span>></span></li>
+					 <li><i class = "iconfont icon-zuanshijiezhi"></i>珠宝收藏<span>></span></li>
+				</ul>
+				
+				<!-- 商品详细分类弹出框 -->
+				<div id = "about">
+					<ul>
+						<li id = "title">家居生活</li>
+						<li id = "arrow">></li>
+						<li><a href="">家居用品</a></li>
+						<li><a href="">卧室用品</a></li>
+						<li><a href="">厨浴电器</a></li>
+						<li><a href="">汽车用品</a></li>
+					</ul>
+					<p>相关热门</p>
+					<ol id = "shopList">
+						<li>
+							<img src="../images/6.jpg" alt="">
+							<a href="">汤臣倍健左旋肉碱</a>
+							<span>价格:<i> ￥399.00</i></span>
+						</li>
+						<li>
+							<img src="../images/7.jpg" alt="">
+							<a href="">汤臣倍健左旋肉碱</a>
+							<span>价格:<i> ￥399.00</i></span>
+						</li>
+						<li>
+							<img src="../images/8.jpg" alt="">
+							<a href="">汤臣倍健左旋肉碱</a>
+							<span>价格:<i> ￥399.00</i></span>
+						</li>
+						<li>
+							<img src="../images/9.jpg" alt="">
+							<a href="">汤臣倍健左旋肉碱</a>
+							<span>价格:<i> ￥399.00</i></span>
+						</li>
+						<li>
+							<img src="../images/10.jpg" alt="">
+							<a href="">汤臣倍健左旋肉碱</a>
+							<span>价格:<i> ￥399.00</i></span>
+						</li>
+					</ol>
+				</div>
+				
+		</div>
+
+		
+
+		<!-- 主要内容 -->
+		<div class="content">
+			<div class="contentin">
+				<table>
+					<tr>
+						<td style = "width:100px"><input type = "checkbox">&nbsp;全选</td>
+						<td style = "width:200px">商品信息</td>
+						<td style = "width:101px">商品编码</td>
+						<td style = "width:70px">单价</td>
+						<td style = "width:70px">库存</td>
+						<td style = "width:120px">是否货到付款</td>
+						<td style = "width:130px">数量</td>
+						<td style = "width:80px">小计</td>
+						<td style = "width:80px">操作</td>
+					</tr>
+					<!-- <tr>
+						<td><input type = "checkbox" class = "inputBox"><img src="../images/80.jpg" alt=""></td>
+						<td><a href="#">肌因修护爽肤水-D</a></td>
+						<td>315446</td>
+						<td class = "price">¥<i>68.00</i></td>
+						<td>有库存</td>
+						<td>否</td>
+						<td><button class = "reduce">-</button><input type="text" value = "1" class = "buyNum">	<button class = "add">+</button></td>
+						<td class = "sum">¥ 272.00</td>
+						<td><a href="#">收藏</a><a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td><input type = "checkbox" class = "inputBox"><img src="../images/81.jpg" alt=""></td>
+						<td><a href="#">肌因修护爽肤水-D</a></td>
+						<td>315446</td>
+						<td class = "price">¥<i>68.00</i></td>
+						<td>有库存</td>
+						<td>否</td>
+						<td><button class = "reduce">-</button><input type="text" value = "1" class = "buyNum">	<button class = "add">+</button></td>
+						<td class = "sum">¥ 272.00</td>
+						<td><a href="#">收藏</a><a href="#">删除</a></td>
+					</tr> -->
+				</table>
+				<p>商品总金额总计<i class = "allSum">￥320.00</i></p>
+				<p>购物车里有商品：<i id= "kind">1</i>种 商品已选择总数：<i id = "choice">1</i>件</p>
+				<p>商品金额总计：<i class = "allSum">￥68.00</i></p>
+			</div>
+		</div>
+
+		<!-- 底部 -->
+		<div class="footer">
+			<div class="footin">
+				<div class="cont">
+					<div class="contin">
+						<ul>
+							<li> <i class="iconfont icon-icon-test"></i> 
+								<div>
+									<p>手机注册 一步搞定</p>
+									<span>输入手机号-输入验证码-获取手机</span>
+									<span>验证码-设定密码-完成注册</span>
+								</div>
+							</li>
+							<li><i class="iconfont icon-dianhua"></i>
+								<div>
+									<p>型录/电商/新媒体视频招商加盟</p>
+									<span>柳小姐：0791-88110022-8126</span>
+								</div>
+							</li>
+							<li><i class="iconfont icon-zaixiankefu"></i>
+								<div>
+									<p>在线客服</p>
+									<span>24小时客服热线：</span>
+									<span>4001-677-077</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cont2">
+					<div class="cont2in">
+						<div class="left">
+							<img src="../images/45.jpg" alt="">
+							<p>关于风尚购物</p>
+							<span>江西风尚电视购物股份有限公司于2009年9月28日正式成立，公司致力于现代家庭电视购物，是传媒和零售的完美组合。江西电视台风尚购物频道是经国家广电总局批准的全国性的、同时也是江西第一家真正的专业家庭电视购物频道。</span>
+						</div>
+						<div class="right">
+							<ul>
+								<li>帮助中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>支付方式</li>
+								<li>货到付款</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>客户服务</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+							</ul>
+							<ul>
+								<li>会员中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>招商专区</li>
+								<li>货到付款</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+							<ul>
+								<li>帮助中心</li>
+								<li>货到付款</li>
+								<li>银联支付</li>
+								<li>支付宝</li>
+								<li>资料修改</li>
+							</ul>
+						</div>
+						<p class="ip">ICP经营许可证：赣ICP备15000001号</p>
+						<div class="img">
+							<img src="../images/51.jpg" alt="">
+							<img src="../images/alipay.jpg" alt="">
+							<img src="../images/52.jpg" alt="">
+							<img src="../images/47.jpg" alt="">
+							<img src="../images/50.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="red"></div>
+		</div>
+
+	</div>
+</body>
+</html>

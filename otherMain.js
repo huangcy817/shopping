@@ -15,10 +15,9 @@ require.config({
 	}
 })
 
-require(["jquery","other","scroll","data","json","cookie","shopList","shopDetails","login"],function($,other,scroll,data,json,cookie,shopList,shopDetails,login){
+require(["jquery","other","scroll","data","json","cookie","shopList","shopDetails","login","shopCar"],function($,other,scroll,data,json,cookie,shopList,shopDetails,login,shopCar){
 	// 其他页面js代码
 	other.other();
-	other.carNum();
 	shopList.shopList();
 	// 滚动窗口
 
@@ -31,4 +30,7 @@ require(["jquery","other","scroll","data","json","cookie","shopList","shopDetail
 	// 登录注册页面
 	login.login();
 
+	// 购物车页面
+	shopCar.shopCar();
+	shopCar.carNum();
 })

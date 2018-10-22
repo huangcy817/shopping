@@ -80,20 +80,20 @@ define(["jquery","cookie"],function($){
 			// 判断是否第一次添加数据
 			var first = $.cookie("shop") == null ? true : false;
 			if(first){
-				$.cookie("shop",`[{shopNum:${$("#shopNum").text()},num:1}]`,{expires:7,raw:true,path:"/"});
+				$.cookie("shop",`[{id:${$("#shopId").val()},num:1}]`,{expires:7,raw:true,path:"/"});
 			}else{
 				// 判断之前是否添加过该商品
 				var cookieStr = eval($.cookie("shop"));
 				var isSame = false;
 				for(var i = 0; i < cookieStr.length; i++){
-					if(cookieStr[i].shopNum == $("#shopNum").text()){
+					if(cookieStr[i].id == $("#shopId").val()){
 						cookieStr[i].num += Number($("#choose input").val());
 						isSame = true;
 						break;
 					}
 				}
 				if(!isSame){
-					var obj = {shopNum:$("#shopNum").text(),num:1};
+					var obj = {id:$("#shopId").val(),num:1};
 					cookieStr.push(obj);
 				}
 				$.cookie("shop",JSON.stringify(cookieStr),{expires:7,raw:true,path:"/"});
@@ -111,7 +111,7 @@ define(["jquery","cookie"],function($){
 		})
 
 		// 关闭购物车弹出框
-		$("#shopcar button").click(function(){
+		$(".close").click(function(){
 			$("#shopcar").css("display","none");
 		})
 

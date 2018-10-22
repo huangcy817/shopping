@@ -248,12 +248,12 @@
               width: 220px;
               height: 220px;
               cursor: pointer; }
-            .content .contentin .contBox .boxRight ul li a {
+            .content .contentin .contBox .boxRight ul li b {
               color: #77778c;
               font-size: 10px;
               display: block;
               margin: 4px 6px; }
-              .content .contentin .contBox .boxRight ul li a:hover {
+              .content .contentin .contBox .boxRight ul li b:hover {
                 color: #fc4c65; }
             .content .contentin .contBox .boxRight ul li i {
               display: inline-block;
@@ -278,9 +278,9 @@
               font-size: 12px;
               margin-left: 6px;
               display: block; }
-            .content .contentin .contBox .boxRight ul li b {
+            .content .contentin .contBox .boxRight ul li a {
               display: block;
-              width: 126px;
+              width: 90px;
               height: 30px;
               text-align: center;
               line-height: 30px;
@@ -289,7 +289,23 @@
               font-weight: bolder;
               font-size: 12px;
               margin: 4px 0 0 6px;
-              cursor: pointer; }
+              cursor: pointer;
+              float: left; }
+              .content .contentin .contBox .boxRight ul li a:hover {
+                color: #fff; }
+            .content .contentin .contBox .boxRight ul li p {
+              display: block;
+              width: 90px;
+              height: 30px;
+              text-align: center;
+              line-height: 30px;
+              background: #50a3e7;
+              cursor: pointer;
+              margin: 4px 0 0 20px;
+              float: left;
+              color: #fff;
+              font-weight: bolder;
+              font-size: 12px; }
 
 #allDiv, #elecDiv, #phoneDiv {
   width: 235px;

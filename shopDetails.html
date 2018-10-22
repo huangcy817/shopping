@@ -167,10 +167,10 @@
 			<div class="contentin">
 			<!-- 加入购物车弹出窗口 -->
 				<div id="shopcar">
-					<p>提示信息<button><img src="../images/x.png" alt="">关闭</button></p>
+					<p>提示信息<button class = "close"><img src="../images/x.png" alt="">关闭</button></p>
 					<span>您所选购的商品已经成功放入购物车!</span>
-					<s><< 继续购物</s>
-					<b>查看购物车</b>
+					<s class = "close"><< 继续购物</s>
+					<b><a href="shopCar.html">查看购物车</a></b>
 				</div>
 				<ul id = "load">
 					<li><a href="">首页</a></li>
@@ -210,7 +210,8 @@
 						<img src="../images/10.jpg" alt="">
 					</div>
 						<p>POLOALAN艺术镂空钻机械表</p>
-						商品货号：<b id = "shopNum">315395</b>
+						商品货号：<b>315395</b>
+						<input type="hidden" value = "1" id = "shopId">
 						<div class="info">
 							<span>风尚价:<s>￥999.00</s></span>
 							<span>促销信息：<i>买赠</i><b>POLOALAN女士计时腕表*1，POLOALAN 经典情侣腕表男表*1；POLOALAN 经典情侣女表*1、时尚手包*1</b></span>

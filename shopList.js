@@ -32,10 +32,12 @@ define(["jquery","cookie"],function($){
 				for(var i = 0; i < data.length; i++){
 					html += `<li>
 								<img src="${data[i].img}" alt="">
-								<a href="#">${data[i].title}</a>
+								<b>${data[i].title}</b>
 								<i>赠</i><span>${data[i].gift}</span>
 								<s>${data[i].price}</s>
-								<b>立即订购</b>
+								<a href = "shopDetails.html">立即订购</a>
+								<p>加入购物车</p>
+								<input type="hidden" value = "${data[i].id}"/>
 							</li>`;
 				}
 				$("#contUl").html(html);
@@ -49,6 +51,43 @@ define(["jquery","cookie"],function($){
 		$("#clear").click(function(){
 			$("#clears").html(" ");
 		})
+
+		// 加入购物车
+
+		$("#contUl").on("click","li p",function(){
+			// 弹出框
+			var left = $(window).width()/2 - $("#shopcar").width()/2;
+			var top = $(window).height()/2 - $("#shopcar").height()*2 + $(document).scrollTop();
+			$("#shopcar").css({
+				display:"block",
+				left:left,
+				top:top
+			});
+
+			var first = $.cookie("shop") == null ? true : false;
+			if(first){
+				$.cookie("shop",`[{id:$(this).parent().children("input").val(),num:1}]`,{expires:7,raw:true,path:"/"});
+			}else{
+				// 判断之前是否添加过该商品
+				var cookieStr = eval($.cookie("shop"));
+				var isSame = false;
+				for(var i = 0; i < cookieStr.length; i++){
+					if(cookieStr[i].id == $(this).parent().children("input").val()){
+						cookieStr[i].num++;
+						isSame = true;
+						break;
+					}
+				}
+				if(!isSame){
+					var obj = {id:$(this).parent().children("input").val(),num:1};
+					cookieStr.push(obj);
+				}
+				$.cookie("shop",JSON.stringify(cookieStr),{expires:7,raw:true,path:"/"});
+
+			}
+		})
+
+
 	}
 
 	return {
