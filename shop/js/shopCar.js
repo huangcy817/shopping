@@ -33,6 +33,9 @@ define(["jquery"],function($){
 			$(this).parent().parent().children('.sum').text("￥" + sum + ".00");
 		})
 
+		// 全选
+		
+
 		// 小计方法
 		function product(price,num){
 			return price * num;

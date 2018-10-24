@@ -66,7 +66,8 @@ define(["jquery","cookie"],function($){
 
 			var first = $.cookie("shop") == null ? true : false;
 			if(first){
-				$.cookie("shop",`[{id:$(this).parent().children("input").val(),num:1}]`,{expires:7,raw:true,path:"/"});
+				var id = $(this).parent().children("input").val();
+				$.cookie("shop",`[{id:${id},num:1}]`,{expires:7,raw:true,path:"/"});
 			}else{
 				// 判断之前是否添加过该商品
 				var cookieStr = eval($.cookie("shop"));
